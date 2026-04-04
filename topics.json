@@ -1,0 +1,117 @@
+{
+  "description": "Blog topic bank for openexperts.tech. Scheduled agent picks the next unused topic.",
+  "topics": [
+    {
+      "slug": "it-guy-on-vacation",
+      "title": "What Happens When Your IT Guy Takes a Vacation?",
+      "keywords": "IT single point of failure, IT coverage, small business IT backup plan",
+      "angle": "The risk of depending on one person. What happens when they're sick, quit, or retire. How to build redundancy.",
+      "used": false
+    },
+    {
+      "slug": "more-than-antivirus",
+      "title": "Why Your Business Needs More Than Antivirus in 2026",
+      "keywords": "small business cybersecurity, antivirus not enough, endpoint protection, layered security",
+      "angle": "Antivirus alone hasn't been enough for years. Cover what modern threats look like and what a real security stack includes.",
+      "used": false
+    },
+    {
+      "slug": "nephew-it-advice",
+      "title": "The Real Cost of Free IT Advice From Your Nephew",
+      "keywords": "cheap IT support, amateur IT help, small business IT mistakes",
+      "angle": "Funny but real. The hidden costs of having unqualified people manage business-critical systems. Not mean-spirited, just honest.",
+      "used": false
+    },
+    {
+      "slug": "after-data-breach",
+      "title": "What to Do After a Data Breach: A Small Business Playbook",
+      "keywords": "data breach response, small business data breach, incident response plan",
+      "angle": "Step-by-step what to do in the first 24 hours, first week, and first month. Legal obligations, notification, remediation.",
+      "used": false
+    },
+    {
+      "slug": "cloud-vs-onpremise",
+      "title": "Cloud vs On-Premise: Which Actually Makes Sense for Your Business?",
+      "keywords": "cloud vs on premise, small business cloud migration, should I move to cloud",
+      "angle": "Honest comparison. Cloud isn't always cheaper or better. On-prem isn't dead. Help them think through the decision.",
+      "used": false
+    },
+    {
+      "slug": "why-open-source",
+      "title": "Why We Use Open Source (And Why You Should Care)",
+      "keywords": "open source for business, open source vs proprietary, free business software",
+      "angle": "Demystify open source. It's not sketchy free software. It powers the internet. Explain why it matters for their bottom line.",
+      "used": false
+    },
+    {
+      "slug": "consumer-router-firewall",
+      "title": "Your Firewall Is Probably a Consumer Router. Here's Why That's a Problem.",
+      "keywords": "business firewall, consumer router vs firewall, pfSense small business, network security",
+      "angle": "Most small businesses are running a $60 router as their only protection. Explain what a real firewall does and why it matters.",
+      "used": false
+    },
+    {
+      "slug": "cyber-insurance",
+      "title": "What Every Business Owner Should Know About Cyber Insurance",
+      "keywords": "cyber insurance small business, cyber liability insurance, do I need cyber insurance",
+      "angle": "What it covers, what it doesn't, why premiums are rising, and how better security lowers your rates.",
+      "used": false
+    },
+    {
+      "slug": "survive-it-transition",
+      "title": "How to Survive an IT Provider Transition Without Losing Your Mind",
+      "keywords": "switching IT providers, changing IT companies, IT provider transition",
+      "angle": "Practical guide to making the switch. What to get from your current provider, what to expect, red flags during handoff.",
+      "used": false
+    },
+    {
+      "slug": "microsoft-365-settings",
+      "title": "The Microsoft 365 Settings Most Businesses Get Wrong",
+      "keywords": "Microsoft 365 security settings, M365 configuration, Office 365 best practices",
+      "angle": "MFA not enabled, sharing defaults too open, no audit logging, retention policies misconfigured. Practical fixes.",
+      "used": false
+    },
+    {
+      "slug": "password-managers",
+      "title": "Why Your Business Needs a Password Manager Yesterday",
+      "keywords": "business password manager, password security, credential management small business",
+      "angle": "Sticky notes and spreadsheets aren't cutting it. What a password manager does, why it matters, how to roll one out.",
+      "used": false
+    },
+    {
+      "slug": "phishing-test",
+      "title": "We Phished Our Own Clients. Here's What We Learned.",
+      "keywords": "phishing test, phishing simulation, employee security training, social engineering",
+      "angle": "Results from real phishing simulations. What people click, why, and how training dramatically reduces the risk.",
+      "used": false
+    },
+    {
+      "slug": "disaster-recovery-plan",
+      "title": "Does Your Business Have a Disaster Recovery Plan? (No, a Backup Isn't Enough)",
+      "keywords": "disaster recovery plan small business, business continuity, DR planning",
+      "angle": "Backups are one piece. What about RTO/RPO? Who does what? Communication plan? Walk through building a real DR plan.",
+      "used": false
+    },
+    {
+      "slug": "vendor-lock-in",
+      "title": "How Vendor Lock-In Is Quietly Costing Your Business Thousands",
+      "keywords": "vendor lock-in, IT vendor lock-in, proprietary software costs",
+      "angle": "When your IT provider or software vendor owns your data, passwords, or infrastructure. How to recognize it and break free.",
+      "used": false
+    },
+    {
+      "slug": "remote-work-security",
+      "title": "Your Remote Workers Are a Security Risk. Here's How to Fix That.",
+      "keywords": "remote work security, VPN for business, work from home IT security",
+      "angle": "Home networks, personal devices, public Wi-Fi. Real risks and practical solutions that don't make remote work miserable.",
+      "used": false
+    },
+    {
+      "slug": "it-budget-mistakes",
+      "title": "The 5 Most Expensive IT Mistakes Small Businesses Make",
+      "keywords": "IT mistakes small business, common IT problems, small business technology mistakes",
+      "angle": "No backups tested, no security budget, buying consumer gear, no documentation, reactive-only IT. Real costs of each.",
+      "used": false
+    }
+  ]
+}

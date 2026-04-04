@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Nurture Sequences — Internal Reference | openexperts.tech</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .email-block {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .email-block h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+      color: var(--dark);
+    }
+    .email-meta {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .email-field {
+      margin-bottom: 0.75rem;
+    }
+    .email-field strong {
+      display: inline-block;
+      min-width: 120px;
+      color: var(--dark);
+    }
+    .email-body {
+      background: var(--light);
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 1rem;
+      white-space: pre-wrap;
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #334155;
+    }
+    .sequence-header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    .sequence-header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .sequence-header p {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav (minimal) -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/services.html">What We Do</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Email Nurture Sequences</h1>
+    <p>Internal reference — ready-to-paste email templates for lead nurture automations. Not linked from the public site.</p>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SEQUENCE A: Cybersecurity Guide Download     -->
+  <!-- ============================================ -->
+
+  <section class="content-section">
+    <div class="section-inner">
+
+      <div class="sequence-header">
+        <h2>Sequence A: Cybersecurity Guide Download</h2>
+        <p>4 emails over 14 days &mdash; triggered when someone downloads the Cybersecurity Essentials guide</p>
+      </div>
+
+      <!-- Email A1 -->
+      <div class="email-block">
+        <h3>Email A1 — Guide Delivery</h3>
+        <div class="email-meta">Send: Immediately after download</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> Here's your cybersecurity guide — one quick thing</div>
+        <div class="email-field"><strong>Preview text:</strong> Plus the single biggest mistake I see small businesses make with security.</div>
+        <div class="email-body">Hey there,
+
+Thanks for grabbing the Cybersecurity Essentials guide. Here's your link:
+
+https://openexperts.tech/guide-cybersecurity-essentials.html
+
+Quick intro — I'm Ken, the founder of openexperts.tech. I've been doing IT for small businesses for over 30 years. Not the big enterprise stuff. The real-world, "we have 15 employees and a server that makes a weird noise" stuff.
+
+I wrote this guide because I kept having the same conversation with business owners: "We're too small to get hacked, right?"
+
+The honest answer is no. Small businesses are actually the biggest target for cybercriminals because most of them have weak defenses and valuable data. But here's the good news — the basics go a long way. Like, really far. You don't need a six-figure security budget. You need to get a handful of things right.
+
+That's what the guide covers. No fear-mongering. Just the practical steps that actually matter.
+
+Give it a read when you get a chance. If anything in there raises questions about your own setup, I'm happy to talk it through. No pitch, no strings — just a conversation.
+
+Talk soon,
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email A2 -->
+      <div class="email-block">
+        <h3>Email A2 — The Real Cost of Getting It Wrong</h3>
+        <div class="email-meta">Send: Day 3</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> A $40,000 lesson about small business security</div>
+        <div class="email-field"><strong>Preview text:</strong> This happened to a 12-person company. It started with one email.</div>
+        <div class="email-body">Hey,
+
+I want to tell you about something that happened to a business I worked with. I'm keeping the details vague to protect their privacy, but the story is real.
+
+They were a 12-person company. Professional services. Good people who were focused on running their business, not thinking about cybersecurity every day. Totally understandable.
+
+One morning, an employee got an email that looked like it came from their bank. It wasn't a terrible fake, but it wasn't perfect either. They clicked the link. Entered their credentials.
+
+Within 48 hours, ransomware had encrypted their file server, their accounting system, and three years of client records.
+
+The ransom demand was $25,000. But that wasn't the real cost. The real cost was two weeks of downtime. Staff sitting around unable to work. Clients calling with no answers. Emergency IT fees. A forensic investigation. New equipment. And the quiet, grinding stress on the owner who kept asking himself, "How did I let this happen?"
+
+All in, it cost them around $40,000 and about six weeks before things felt normal again.
+
+Here's what gets me: the attack would have been stopped by two things they didn't have. Multi-factor authentication on their email, and a basic employee training program. That's it. Two things that cost almost nothing.
+
+I'm not telling you this to scare you. I'm telling you because this stuff is preventable. The guide I sent you covers exactly the kind of basics that would have stopped this attack cold.
+
+If you've been meaning to take a closer look at your own security posture but haven't gotten around to it, I get it. It's never the urgent thing until it is. If it would help to have a second set of eyes on your setup — even just a quick gut-check conversation — I'm here for that.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email A3 -->
+      <div class="email-block">
+        <h3>Email A3 — 3 Things Most Small Businesses Get Wrong</h3>
+        <div class="email-meta">Send: Day 7</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> 3 security mistakes I see in almost every small business</div>
+        <div class="email-field"><strong>Preview text:</strong> Number 2 is the one that surprises people the most.</div>
+        <div class="email-body">Hey,
+
+After 30+ years of working with small businesses, I've noticed the same security gaps come up again and again. Here are the three biggest ones:
+
+1. THINKING MICROSOFT 365 BACKS UP YOUR DATA
+
+It doesn't. Not in the way you're probably thinking. Microsoft's retention policies are designed for their convenience, not yours. If an employee deletes files, if ransomware encrypts your SharePoint, or if an account gets compromised — you could be out of luck.
+
+I wrote about this in more detail here:
+https://openexperts.tech/blog-microsoft-365-backup.html
+
+2. NO MULTI-FACTOR AUTHENTICATION ON BUSINESS EMAIL
+
+This is the single easiest win in cybersecurity, and a shocking number of businesses still haven't done it. Your email is the skeleton key to everything — password resets, banking, client communication. If someone gets into your email with a stolen password, MFA is the thing that stops them.
+
+If you haven't turned this on yet, do it this week. Seriously. It takes about 15 minutes per user and it's the best 15 minutes you'll ever spend on security.
+
+3. NO PLAN FOR WHAT HAPPENS WHEN SOMETHING GOES WRONG
+
+Most small businesses don't have an incident response plan. They don't know who to call, what to disconnect, or how to communicate with clients if something happens. So when it does happen, panic takes over and the damage gets worse.
+
+You don't need a 50-page document. You need a one-page plan that answers: Who do we call? What do we shut down first? How do we tell our clients? That's it.
+
+I covered a lot of this in the cybersecurity guide you downloaded, but if you want to go deeper on any of these, just hit reply. I'm a real person and I actually read these.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email A4 -->
+      <div class="email-block">
+        <h3>Email A4 — Soft CTA to Security Assessment</h3>
+        <div class="email-meta">Send: Day 14</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> Quick question about your security setup</div>
+        <div class="email-field"><strong>Preview text:</strong> Not a sales pitch. Just an honest offer.</div>
+        <div class="email-body">Hey,
+
+Two weeks ago you downloaded our cybersecurity guide. I hope it was useful. If you read it and thought "we're actually in pretty good shape" — great, genuinely. That's the best outcome.
+
+But if you read it and had that sinking feeling — the "we should probably look at this" feeling — I want you to know there's an easy next step.
+
+We do a free security assessment for small businesses. It's not a high-pressure sales call. Here's what it actually looks like:
+
+- A 30-minute conversation about your current setup
+- I'll ask you some straightforward questions about how things are configured
+- You'll get an honest assessment of where your biggest risks are
+- If there are things you can fix yourself, I'll tell you exactly how
+
+That's it. No 90-day proposal. No pressure to sign anything. About half the businesses I talk to end up handling things on their own, and that's completely fine. I'd rather you be secure than be my client.
+
+If you want to set something up:
+https://openexperts.tech/#contact
+
+Or just reply to this email and we'll find a time.
+
+Either way, thanks for reading. I'm always here if you need a sounding board on this stuff.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SEQUENCE B: IT Buyer's Guide Download        -->
+  <!-- ============================================ -->
+
+  <section class="content-section alt">
+    <div class="section-inner">
+
+      <div class="sequence-header">
+        <h2>Sequence B: IT Buyer's Guide Download</h2>
+        <p>4 emails over 14 days &mdash; triggered when someone downloads the IT Buyer's Guide</p>
+      </div>
+
+      <!-- Email B1 -->
+      <div class="email-block">
+        <h3>Email B1 — Guide Delivery</h3>
+        <div class="email-meta">Send: Immediately after download</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> Your IT Buyer's Guide is ready</div>
+        <div class="email-field"><strong>Preview text:</strong> Plus why I wrote this guide in the first place.</div>
+        <div class="email-body">Hey there,
+
+Thanks for downloading the IT Buyer's Guide. Here's your link:
+
+https://openexperts.tech/guide-it-buyers-guide.html
+
+I'm Ken, the founder of openexperts.tech. I've been in IT for over 30 years — almost all of it working with small businesses. Not the Fortune 500. The 10-to-200 employee companies that actually make the economy run.
+
+I wrote this guide because I got tired of watching small businesses get burned by IT providers who over-promise and under-deliver. The managed services industry has a real transparency problem, and most business owners don't know the right questions to ask until after they've been burned.
+
+This guide is my attempt to fix that. It covers what to look for in a provider, what questions to ask, and — honestly — what red flags should make you walk away.
+
+Give it a read. If anything in there hits close to home, I'm happy to talk it through.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email B2 -->
+      <div class="email-block">
+        <h3>Email B2 — The Fear of Switching</h3>
+        <div class="email-meta">Send: Day 3</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> The #1 thing we hear from businesses switching IT providers</div>
+        <div class="email-field"><strong>Preview text:</strong> It's not about the technology. It's about the fear.</div>
+        <div class="email-body">Hey,
+
+You know what we hear more than anything from businesses that are thinking about switching IT providers?
+
+"What if the transition breaks everything?"
+
+I get it. You've seen the horror stories. You've maybe lived one. The idea of somebody new coming in and touching your systems — your email, your servers, your data — when you're already frustrated with your current situation? That's a lot of trust to extend.
+
+So let me be straight with you: switching IT providers is almost never as painful as people think it's going to be.
+
+Here's why. A good provider will do a full documentation and discovery phase before they change a single thing. They'll map your network, inventory your systems, review your accounts, and build a transition plan. The actual switchover is usually the boring part because all the real work happened before it.
+
+The businesses that have the worst transitions are the ones where the new provider rushes in and starts making changes on day one. That's a red flag, not a sign of enthusiasm.
+
+If you're currently in that "we know we need to switch but we're afraid to pull the trigger" zone, here's my advice: start the conversation. Talk to a couple of providers. Ask them to walk you through exactly how they handle transitions. You'll know fast who takes it seriously and who's just telling you what you want to hear.
+
+And if your current provider is holding your documentation or credentials hostage — that's a sign you're dealing with the wrong people, and it's also more common than you'd think. The guide I sent you covers how to handle that.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email B3 -->
+      <div class="email-block">
+        <h3>Email B3 — What Your IT Provider Should Be Telling You</h3>
+        <div class="email-meta">Send: Day 7</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> What your IT provider should be telling you (but probably isn't)</div>
+        <div class="email-field"><strong>Preview text:</strong> Three gaps most providers won't bring up — and why that matters.</div>
+        <div class="email-body">Hey,
+
+There are a few things a good IT provider should proactively tell you about. In my experience, most don't — either because they don't know, or because fixing the problem would cut into their margins.
+
+Here are three big ones:
+
+YOUR MICROSOFT 365 DATA ISN'T BACKED UP
+
+I know I keep beating this drum, but it's that important. Microsoft's own service agreement says they recommend third-party backup. Most IT providers either don't mention this or charge you extra for it without explaining why it matters.
+
+If your provider hasn't brought this up, ask them about it this week. Here's more detail:
+https://openexperts.tech/blog-microsoft-365-backup.html
+
+YOU MIGHT BE OVERPAYING FOR SOFTWARE LICENSES
+
+A lot of small businesses are on enterprise-grade licensing plans they don't need. Microsoft 365 E5 when E3 (or even Business Premium) would do. VMware licenses that could be replaced with free alternatives like Proxmox. Your provider may not volunteer this information because they get kickbacks on licensing.
+
+We wrote about the VMware situation specifically:
+https://openexperts.tech/blog-vmware-alternatives.html
+
+YOU SHOULD HAVE YOUR OWN DOCUMENTATION
+
+Here's a test: if your IT provider disappeared tomorrow, would you know all your admin passwords? Would you have a network diagram? An inventory of your systems and when they were last updated?
+
+If the answer is no, that's a problem. Your documentation should belong to you, not your provider. A good provider will keep it updated and share it with you. If yours won't, that's a red flag.
+
+None of this is meant to trash your current provider. A lot of IT companies are genuinely doing their best. But these are the gaps I see most often, and they're the ones that end up costing businesses the most when something goes wrong.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+      <!-- Email B4 -->
+      <div class="email-block">
+        <h3>Email B4 — Soft CTA to Free Consultation</h3>
+        <div class="email-meta">Send: Day 14</div>
+        <div class="email-field"><strong>From:</strong> Ken @ openexperts.tech</div>
+        <div class="email-field"><strong>Subject:</strong> Whenever you're ready (no rush)</div>
+        <div class="email-field"><strong>Preview text:</strong> A real conversation with a real person. That's all this is.</div>
+        <div class="email-body">Hey,
+
+It's been a couple of weeks since you downloaded the IT Buyer's Guide. I wanted to check in — not to sell you something, but because I know the decision to evaluate your IT situation can sit on the back burner for a long time.
+
+I've been there. I run a small business too. There's always something more urgent than "figure out if we're getting good IT service."
+
+But here's what I've noticed after 30 years: the businesses that take 30 minutes to have an honest conversation about their technology almost always come away with something useful. Sometimes it's a specific thing they can fix right away. Sometimes it's just the peace of mind of knowing they're not getting ripped off.
+
+If you want to have that conversation, here's how to set it up:
+https://openexperts.tech/#contact
+
+There's no agenda on my end. I'll ask you some questions about your setup, tell you what I think, and that's it. If we're a good fit to work together, great. If not, you'll still walk away with better information than you had before.
+
+No pressure. No follow-up sequence after this. Just an open door whenever you're ready.
+
+Ken
+openexperts.tech</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right — reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech — Small Business IT Experts</p>
+    </div>
+  </footer>
+
+</body>
+</html>
