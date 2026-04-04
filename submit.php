@@ -10,6 +10,29 @@ $situation = filter_input(INPUT_POST, 'situation', FILTER_SANITIZE_SPECIAL_CHARS
 $message   = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS);
 $source    = filter_input(INPUT_POST, 'source', FILTER_SANITIZE_SPECIAL_CHARS);
 
+// Bot detection
+$honeypot = filter_input(INPUT_POST, 'website', FILTER_SANITIZE_SPECIAL_CHARS);
+$formToken = filter_input(INPUT_POST, '_token', FILTER_SANITIZE_SPECIAL_CHARS);
+$loadTime  = filter_input(INPUT_POST, '_loaded', FILTER_SANITIZE_SPECIAL_CHARS);
+
+// Honeypot: hidden field that should be empty
+if (!empty($honeypot)) {
+    echo json_encode(['success' => true]); // fake success so bots don't retry
+    exit;
+}
+
+// JS token: must match expected value (bots without JS won't have it)
+if ($formToken !== 'oe-human-2026') {
+    echo json_encode(['success' => true]);
+    exit;
+}
+
+// Time check: reject if submitted faster than 3 seconds
+if (!empty($loadTime) && (time() - intval($loadTime)) < 3) {
+    echo json_encode(['success' => true]);
+    exit;
+}
+
 // Basic validation
 if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     http_response_code(400);
