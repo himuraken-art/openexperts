@@ -88,8 +88,8 @@ if (!empty($source) && isset($guideLinks[$source])) {
     $replyBody .= "  Founder, Open Experts\n";
     $replyBody .= "  https://openexperts.tech\n";
 
-    $replyHeaders  = "From: Alan Bildzukewicz <alan@openexperts.tech>\r\n";
-    $replyHeaders .= "Reply-To: alan@openexperts.tech\r\n";
+    $replyHeaders  = "From: Alan Bildzukewicz <aib@junopi.com>\r\n";
+    $replyHeaders .= "Reply-To: aib@junopi.com\r\n";
 
     mail($email, $replySubject, $replyBody, $replyHeaders, '-f noreply@openexperts.tech');
 }
