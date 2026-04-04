@@ -112,6 +112,153 @@
       "keywords": "IT mistakes small business, common IT problems, small business technology mistakes",
       "angle": "No backups tested, no security budget, buying consumer gear, no documentation, reactive-only IT. Real costs of each.",
       "used": false
+    },
+    {
+      "slug": "mfa-explained",
+      "title": "Multi-Factor Authentication: The Single Best Thing You Can Do for Security Today",
+      "keywords": "MFA for business, two factor authentication, multi-factor authentication small business",
+      "angle": "What MFA is in plain English, why it stops 99% of account compromises, how to roll it out without driving your team crazy. Cover M365 MFA specifically.",
+      "used": false
+    },
+    {
+      "slug": "server-closet-horror",
+      "title": "What's Hiding in Your Server Closet? (A Field Guide to IT Neglect)",
+      "keywords": "server room maintenance, small business server, IT infrastructure neglect",
+      "angle": "Funny but real tour of common server closet nightmares — daisy-chained power strips, consumer switches, no UPS, dust-choked vents. What each one risks and how to fix it.",
+      "used": false
+    },
+    {
+      "slug": "sharepoint-vs-file-server",
+      "title": "SharePoint vs a File Server: Which One Does Your Business Actually Need?",
+      "keywords": "SharePoint vs file server, OneDrive for business, small business file sharing",
+      "angle": "Honest comparison. SharePoint/OneDrive is great for some things, terrible for others. File servers aren't dead. Help them choose based on how their team actually works.",
+      "used": false
+    },
+    {
+      "slug": "ups-power-protection",
+      "title": "A $200 UPS Could Save Your Business $50,000. Here's Why.",
+      "keywords": "UPS for business, uninterruptible power supply, power protection server, surge protection business",
+      "angle": "What happens when power blips — corrupted databases, dead drives, lost work. What a UPS does, how to size one, and why every business with a server needs one.",
+      "used": false
+    },
+    {
+      "slug": "security-cameras-network",
+      "title": "Your Security Cameras Are on the Same Network as Your Business Data. That's a Problem.",
+      "keywords": "security camera network segmentation, IoT security business, network security cameras",
+      "angle": "IoT devices like cameras are notoriously insecure. If they're on the same network as your files and POS, they're a backdoor. Explain VLANs and segmentation in simple terms.",
+      "used": false
+    },
+    {
+      "slug": "email-compromise-bec",
+      "title": "Business Email Compromise: The $2.7 Billion Scam You've Never Heard Of",
+      "keywords": "business email compromise, BEC scam, CEO fraud, email fraud small business",
+      "angle": "Not phishing — targeted impersonation where attackers pretend to be the CEO or a vendor and trick employees into wiring money. Real examples, how to spot it, how to prevent it.",
+      "used": false
+    },
+    {
+      "slug": "documentation-matters",
+      "title": "If Your IT Person Got Hit by a Bus Tomorrow, Could You Recover?",
+      "keywords": "IT documentation, business continuity, IT knowledge transfer, bus factor",
+      "angle": "The bus factor problem. If everything lives in one person's head, you're one resignation away from chaos. What should be documented, how, and where.",
+      "used": false
+    },
+    {
+      "slug": "windows-10-end-of-life",
+      "title": "Windows 10 End of Life: What Your Business Needs to Do Before the Deadline",
+      "keywords": "Windows 10 end of life, Windows 10 EOL business, upgrade to Windows 11, Windows 10 support ending",
+      "angle": "October 2025 deadline passed but many businesses are still running it. Security risks of unpatched systems. Options: upgrade, replace hardware, or extended security updates (paid). Practical guidance.",
+      "used": false
+    },
+    {
+      "slug": "managed-vs-break-fix",
+      "title": "Managed IT vs Break-Fix: Which Model Actually Saves You Money?",
+      "keywords": "managed IT vs break fix, MSP vs break fix, managed services small business",
+      "angle": "Real cost comparison. Break-fix seems cheaper until something big breaks. Managed seems expensive until you realize what's included. Help them calculate the real math for their situation.",
+      "used": false
+    },
+    {
+      "slug": "dark-web-monitoring",
+      "title": "Your Company's Passwords Are Probably Already on the Dark Web",
+      "keywords": "dark web monitoring business, compromised credentials, data breach check, password leak",
+      "angle": "What the dark web is (demystified), how credentials end up there, why it matters even for small businesses, and what you can do about it. Not fear-mongering — practical.",
+      "used": false
+    },
+    {
+      "slug": "ai-for-small-business",
+      "title": "AI for Small Business: What's Actually Useful vs What's Just Hype",
+      "keywords": "AI for small business, artificial intelligence small business, ChatGPT for business",
+      "angle": "Cut through the noise. What AI tools are genuinely useful right now (email drafting, data analysis, customer service). What's overhyped. Security and privacy concerns with business data in AI tools.",
+      "used": false
+    },
+    {
+      "slug": "onboarding-offboarding",
+      "title": "How to Onboard and Offboard Employees Without Creating Security Gaps",
+      "keywords": "employee onboarding IT, employee offboarding security, IT checklist new hire, terminate employee access",
+      "angle": "New hire needs access to everything on day one. Departing employee shouldn't have access to anything after they leave. Most businesses botch both. Provide practical checklists for each.",
+      "used": false
+    },
+    {
+      "slug": "wifi-for-business",
+      "title": "Why Your Business Wi-Fi Sucks (And How to Fix It for Under $500)",
+      "keywords": "business WiFi setup, slow office WiFi, access points vs router, small business wireless",
+      "angle": "Consumer routers daisy-chained. No guest network. Dead zones everywhere. Cover what proper business WiFi looks like — access points, controller-based management, guest isolation. Budget-friendly options.",
+      "used": false
+    },
+    {
+      "slug": "compliance-basics",
+      "title": "Data Compliance for Small Business: What You Probably Don't Know You're Required to Do",
+      "keywords": "small business data compliance, HIPAA small business, PCI compliance small business, data protection regulations",
+      "angle": "Many small businesses have compliance obligations they don't know about (PCI if you take cards, HIPAA if you touch health data, state privacy laws). Quick guide to figuring out what applies to you.",
+      "used": false
+    },
+    {
+      "slug": "backup-testing",
+      "title": "When Was the Last Time You Tested Your Backups? (If You Can't Remember, Read This)",
+      "keywords": "backup testing, backup restore test, backup verification, are my backups working",
+      "angle": "Backups that have never been tested are Schrodinger's backups — they might work, they might not. Real horror stories of untested backups failing. How to build a testing routine.",
+      "used": false
+    },
+    {
+      "slug": "hardware-lifecycle",
+      "title": "Your 7-Year-Old Server Is a Ticking Time Bomb. Here's the Math.",
+      "keywords": "server replacement cycle, hardware lifecycle, when to replace server, old server risk",
+      "angle": "The cost of running old hardware vs replacing it. Failure rates by age, energy costs, performance impact, warranty gaps. A simple framework for budgeting hardware replacement.",
+      "used": false
+    },
+    {
+      "slug": "microsoft-licensing-maze",
+      "title": "Microsoft 365 Licensing: A Plain-English Guide to Not Overpaying",
+      "keywords": "Microsoft 365 licensing guide, M365 plans comparison, Office 365 which plan, Microsoft licensing small business",
+      "angle": "Business Basic vs Standard vs Premium. Which users need which plans. Common overspending mistakes. The features most small businesses actually use vs what they're paying for.",
+      "used": false
+    },
+    {
+      "slug": "social-engineering",
+      "title": "Your Employees Will Give Away the Keys to the Kingdom If You Ask Nicely Enough",
+      "keywords": "social engineering attacks, social engineering prevention, employee security awareness",
+      "angle": "How social engineering works — phone pretexting, tailgating, impersonation. Real scenarios. Why even smart people fall for it. How training and process changes make it much harder.",
+      "used": false
+    },
+    {
+      "slug": "dns-filtering",
+      "title": "The Cheapest Security Upgrade You're Not Using: DNS Filtering",
+      "keywords": "DNS filtering business, DNS security, web filtering small business, block malicious websites",
+      "angle": "DNS filtering blocks malicious sites before they load. Takes 15 minutes to set up, costs almost nothing, stops a huge percentage of threats. One of the best bang-for-buck security measures.",
+      "used": false
+    },
+    {
+      "slug": "it-audit-checklist",
+      "title": "A 20-Point IT Audit You Can Do Yourself (Before Calling Anyone)",
+      "keywords": "IT audit checklist, small business IT assessment, IT health check DIY",
+      "angle": "Empowering, not sales-y. Give them 20 yes/no questions to assess their own IT health. Covers backups, security, documentation, hardware age, licensing, disaster recovery. Score yourself and know where you stand.",
+      "used": false
+    },
+    {
+      "slug": "year-end-it-planning",
+      "title": "Year-End IT Planning: How to Set Up 2027 for Success",
+      "keywords": "IT planning small business, technology budget planning, year end IT review, IT roadmap",
+      "angle": "Timely end-of-year piece. Review what happened this year, budget for next year, plan hardware refreshes, review contracts and renewals, assess security posture. A practical planning framework.",
+      "used": false
     }
   ]
 }
