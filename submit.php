@@ -58,8 +58,41 @@ $body .= "Submitted: " . date('Y-m-d H:i:s T') . "\n";
 $headers = "From: noreply@openexperts.tech\r\n";
 $headers .= "Reply-To: $email\r\n";
 
-// Send email
+// Send notification to business owner
 $sent = mail($to, $subject, $body, $headers, '-f noreply@openexperts.tech');
+
+// Send auto-reply with guide link to the requester
+$guideLinks = [
+    'cybersecurity-guide'              => ['Cybersecurity Essentials for Business Owners', 'https://openexperts.tech/guide-cybersecurity-essentials.html'],
+    'it-buyers-guide'                  => ['Small Business IT Buyer\'s Guide', 'https://openexperts.tech/guide-it-buyers-guide.html'],
+    'disaster-recovery-template'       => ['Small Business Disaster Recovery Template', 'https://openexperts.tech/guide-disaster-recovery.html'],
+    'it-provider-scorecard'            => ['IT Provider Scorecard', 'https://openexperts.tech/guide-it-provider-scorecard.html'],
+    'm365-security-checklist'          => ['Microsoft 365 Security Hardening Checklist', 'https://openexperts.tech/guide-m365-security.html'],
+    'onboarding-offboarding-checklist' => ['Employee Onboarding & Offboarding IT Checklist', 'https://openexperts.tech/guide-onboarding-offboarding.html'],
+    'm365-licensing-guide'             => ['Microsoft 365 Licensing Cheat Sheet', 'https://openexperts.tech/guide-m365-licensing.html'],
+    'vmware-exit-playbook'             => ['The VMware Exit Playbook', 'https://openexperts.tech/guide-vmware-exit.html'],
+];
+
+if (!empty($source) && isset($guideLinks[$source])) {
+    $guideName = $guideLinks[$source][0];
+    $guideUrl  = $guideLinks[$source][1];
+    $firstName = explode(' ', trim($name))[0];
+
+    $replySubject = "Your Free Guide: $guideName";
+    $replyBody  = "Hi $firstName,\n\n";
+    $replyBody .= "Thanks for requesting the $guideName from Open Experts. Here's your link:\n\n";
+    $replyBody .= "$guideUrl\n\n";
+    $replyBody .= "Bookmark it, share it with your team, or print it out -- it's yours to keep.\n\n";
+    $replyBody .= "If you have any questions about what's in the guide, or if you'd like to talk through how it applies to your business, just reply to this email. You'll reach me directly -- no sales team, no runaround.\n\n";
+    $replyBody .= "- Alan Bildzukewicz\n";
+    $replyBody .= "  Founder, Open Experts\n";
+    $replyBody .= "  https://openexperts.tech\n";
+
+    $replyHeaders  = "From: Alan Bildzukewicz <alan@openexperts.tech>\r\n";
+    $replyHeaders .= "Reply-To: alan@openexperts.tech\r\n";
+
+    mail($email, $replySubject, $replyBody, $replyHeaders, '-f noreply@openexperts.tech');
+}
 
 // Also log to file as backup
 $logDir = __DIR__ . '/leads';
