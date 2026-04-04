@@ -6,7 +6,7 @@
       "title": "What Happens When Your IT Guy Takes a Vacation?",
       "keywords": "IT single point of failure, IT coverage, small business IT backup plan",
       "angle": "The risk of depending on one person. What happens when they're sick, quit, or retire. How to build redundancy.",
-      "used": false
+      "used": true
     },
     {
       "slug": "more-than-antivirus",
