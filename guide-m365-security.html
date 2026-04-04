@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft 365 Security Hardening Checklist | Open Experts</title>
+  <meta name="description" content="A complete Microsoft 365 security hardening checklist for small business. Covers MFA, conditional access, email security, data protection, monitoring, device management, and backup — organized by priority.">
+  <meta name="keywords" content="Microsoft 365 security hardening, M365 security checklist, Office 365 security settings, M365 MFA setup, Microsoft 365 conditional access, M365 email security, Microsoft 365 backup, M365 data loss prevention">
+  <link rel="canonical" href="https://openexperts.tech/guide-m365-security.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Microsoft 365 Security Hardening Checklist | Open Experts">
+  <meta property="og:description" content="A step-by-step M365 security hardening checklist. Every critical setting, organized by priority, explained in plain English.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/guide-m365-security.html">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:4rem;">
+    <h1>Microsoft 365 Security <em>Hardening Checklist</em></h1>
+    <p>Every critical security setting in your M365 tenant, organized by priority and explained in plain English. Hand this to your IT person and make sure it gets done.</p>
+  </section>
+
+  <!-- Introduction -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>Microsoft 365 is the backbone of most small businesses. Email, files, calendars, Teams &mdash; it all lives there. And by default, most of it is not configured securely.</p>
+      <p>That's not a knock on Microsoft. They build a platform that works for millions of organizations, from one-person shops to Fortune 500 companies. But that means the default settings are designed for convenience, not security. It's your responsibility &mdash; or your IT provider's &mdash; to lock it down.</p>
+      <p>We've audited hundreds of Microsoft 365 tenants for small businesses. The pattern is almost always the same: the tenant was set up, email was configured, licenses were assigned, and nobody ever went back to harden the security settings. That's what this checklist fixes.</p>
+      <p><strong>A note on implementation:</strong> This guide tells you <em>what</em> to do and <em>why</em> it matters. For the actual step-by-step configuration, you should have your IT person or provider handle it. Some of these settings, if configured incorrectly, can lock people out or break workflows. Get it done right the first time.</p>
+
+      <h2>Section 1: Identity &amp; Access (Critical Priority)</h2>
+      <p>Identity is the new perimeter. In a cloud-first world, your login credentials are the keys to everything. If an attacker gets a valid username and password, they're in &mdash; and they look just like a legitimate user. These settings are the single most important things you can do to protect your M365 tenant.</p>
+
+      <h3>Enable MFA for ALL Users</h3>
+      <p>Multi-factor authentication means that even if someone steals a password, they still can't log in without a second factor &mdash; usually a code from a phone app or a push notification. This single setting blocks over 99% of account compromise attacks, according to Microsoft's own data.</p>
+      <p>Not just admins. Not just "when we get around to it." Every single user account in your tenant needs MFA enabled, enforced, and actually being used. If your IT provider tells you it's "too inconvenient" for users, find a new IT provider. The inconvenience of MFA is nothing compared to the inconvenience of a compromised mailbox.</p>
+
+      <h3>Use Dedicated Admin Accounts</h3>
+      <p>Here's something we see constantly: the business owner or IT person uses their everyday email account as the Global Administrator. They're reading emails, clicking links, and browsing the web with the same account that has full control over the entire Microsoft 365 tenant.</p>
+      <p>That's like carrying the master key to your building on the same keyring you hand to the valet. Admin accounts should be separate, dedicated accounts that are only used for administrative tasks. They shouldn't have a mailbox. They shouldn't be used for daily work. They should have the strongest MFA possible &mdash; ideally a hardware security key.</p>
+
+      <h3>Disable Legacy Authentication Protocols</h3>
+      <p>Legacy authentication protocols (POP, IMAP, SMTP AUTH, and others) don't support MFA. That means even if you've enforced MFA on every account, an attacker can bypass it completely by using a legacy protocol to authenticate. It's a wide-open back door.</p>
+      <p>Most modern email clients and apps use modern authentication. But some older applications, printers that scan to email, or legacy line-of-business apps might still use legacy protocols. Your IT person needs to audit what's using legacy auth, migrate those to modern alternatives, and then block legacy authentication entirely.</p>
+
+      <h3>Set Up Conditional Access Basics</h3>
+      <p>Conditional access policies let you add rules like: "Block sign-ins from countries where we don't do business," or "Require MFA when someone signs in from an unrecognized device," or "Block access from impossible travel locations" (someone logging in from New York and then from Moscow 20 minutes later).</p>
+      <p>Note: Conditional access requires Azure AD Premium P1 licensing, which is included in Microsoft 365 Business Premium. If you're on Business Basic or Standard, you'll have the more limited "Security Defaults" option, which is still better than nothing &mdash; make sure it's turned on.</p>
+
+      <h3>Review and Remove Unused Admin Roles</h3>
+      <p>The principle of least privilege: nobody should have more access than they need to do their job. We regularly find M365 tenants with five or six Global Administrators when only one or two are needed. Every admin account is an attack surface. Review who has admin roles, remove any that aren't needed, and downgrade Global Admins to more limited roles where possible (Exchange Admin, SharePoint Admin, etc.).</p>
+
+      <h2>Section 2: Email Security (High Priority)</h2>
+      <p>Email is how most attacks start. Phishing, business email compromise, malware &mdash; it all comes through the inbox. These settings protect your email environment from the most common attack patterns.</p>
+
+      <h3>Block Auto-Forwarding to External Domains</h3>
+      <p>This is the single most important email security setting in M365 and it's turned off by default. Here's how the attack works: an attacker compromises a mailbox, sets up a forwarding rule to send a copy of every email to an external address, and then sits back and reads everything. Invoices, contracts, client communications &mdash; all of it. They use what they learn to craft targeted attacks, usually fake payment requests or invoice fraud.</p>
+      <p>Block auto-forwarding to external domains at the transport rule level. This prevents anyone &mdash; including compromised accounts &mdash; from automatically sending email outside your organization. If someone legitimately needs to forward email externally, that should be a deliberate, approved exception.</p>
+
+      <h3>Enable Safe Links and Safe Attachments</h3>
+      <p>If you're on Microsoft 365 Business Premium (and you should be &mdash; the security features alone justify the upgrade), enable Safe Links and Safe Attachments. Safe Links rewrites URLs in emails to check them at click time, catching malicious links that were clean when the email was delivered. Safe Attachments opens attachments in a sandbox to check for malware before delivering them to the user.</p>
+
+      <h3>Set Up Anti-Phishing Policies</h3>
+      <p>M365's built-in anti-phishing can detect impersonation attempts &mdash; emails that look like they're from your CEO or a trusted vendor but aren't. Configure anti-phishing policies to protect your key users (executives, finance team) and your most important sending domains. Set the action to quarantine or reject, not just add a warning tag that people ignore.</p>
+
+      <h3>Review Mail Flow Rules for Suspicious Forwarding</h3>
+      <p>Even if you block new auto-forwarding rules, existing ones might already be in place. Review all mail flow rules in your tenant for any that forward email externally. Check individual mailbox rules too &mdash; attackers love to create inbox rules that move emails to the RSS Subscriptions folder or Deleted Items so the user never sees them.</p>
+
+      <h3>Configure DMARC, DKIM, and SPF for Your Domain</h3>
+      <p>These three email authentication standards prevent attackers from sending emails that appear to come from your domain. SPF tells receiving mail servers which servers are authorized to send email for your domain. DKIM adds a digital signature that proves the email hasn't been tampered with. DMARC ties them together and tells receiving servers what to do with emails that fail authentication.</p>
+      <p>Without these, an attacker can send emails that look exactly like they came from your company &mdash; to your clients, your vendors, your employees. Your IT person can configure all three in an afternoon. There's no reason not to have them.</p>
+
+      <h2>Section 3: Data Protection (High Priority)</h2>
+      <p>Your data is in the cloud, which means sharing and collaboration are easy. Maybe too easy. These settings make sure your data isn't being shared more broadly than you intend.</p>
+
+      <h3>Review External Sharing Settings in SharePoint and OneDrive</h3>
+      <p>By default, SharePoint and OneDrive allow sharing with external users &mdash; and in many configurations, anyone with a link can access the content without even signing in. Review your sharing settings and tighten them to match your actual business needs. Most small businesses should limit external sharing to "authenticated guests only" at minimum.</p>
+
+      <h3>Disable Anonymous Sharing Links (or Set Expiration)</h3>
+      <p>"Anyone with the link" sharing means exactly what it says &mdash; anyone who gets that link can access the file. No authentication required. These links get forwarded, bookmarked, indexed, and forgotten. At minimum, set an expiration on "Anyone" links (7 days is reasonable). Better yet, disable them entirely and require recipients to sign in.</p>
+
+      <h3>Enable Sensitivity Labels for Confidential Documents</h3>
+      <p>Sensitivity labels let you classify and protect documents based on their content. A document labeled "Confidential" can be automatically encrypted, restricted from external sharing, and watermarked. This is especially important for businesses that handle client data, financial information, or anything regulated. It takes some planning to set up, but it's powerful protection.</p>
+
+      <h3>Configure Data Loss Prevention Policies</h3>
+      <p>DLP policies automatically detect and protect sensitive data like Social Security numbers, credit card numbers, health records, or financial data. You can configure policies to block, warn, or log when someone tries to share this kind of data externally. If your business handles any sensitive personal or financial data, DLP should be configured. It's included in Business Premium.</p>
+
+      <h3>Review Guest Access Permissions</h3>
+      <p>Guest users in your M365 tenant might have more access than you realize. Review who has guest access, what they can see, and whether they still need it. Set up regular access reviews &mdash; quarterly at minimum. Remove guest accounts that are no longer needed. Every guest account is a potential entry point.</p>
+
+      <h2>Section 4: Monitoring &amp; Logging (Medium Priority)</h2>
+      <p>You can't protect what you can't see. These settings make sure you have visibility into what's happening in your M365 environment &mdash; and that you get alerted when something looks wrong.</p>
+
+      <h3>Turn On Unified Audit Logging</h3>
+      <p>Unified audit logging records activity across Exchange, SharePoint, OneDrive, Azure AD, and other M365 services. It is not turned on by default in all configurations. Without it, if something bad happens, you have no way to investigate what occurred, when it happened, or how far the damage extends. Turn it on. It's free and there's no performance impact.</p>
+
+      <h3>Enable Mailbox Auditing</h3>
+      <p>Mailbox auditing tracks actions like who accessed a mailbox, what emails were read, and whether forwarding rules were created. Microsoft has been rolling out mailbox auditing by default, but verify that it's actually enabled for all mailboxes in your tenant. During a breach investigation, mailbox audit logs are often the most critical evidence.</p>
+
+      <h3>Set Up Alerts for Suspicious Activities</h3>
+      <p>M365 has built-in alert policies that can notify you when suspicious things happen: mass file downloads, impossible travel sign-ins, forwarding rules being created, admin role changes, and more. Review the default alert policies and enable the ones that matter for your business. Make sure the alerts go to someone who actually reads them and knows what to do.</p>
+
+      <h3>Review Sign-In Logs Monthly</h3>
+      <p>Make it a habit &mdash; or make it your IT provider's habit &mdash; to review sign-in logs at least monthly. Look for failed sign-in attempts (credential-stuffing attacks), sign-ins from unexpected locations, and sign-ins using legacy protocols. Patterns in sign-in logs often reveal attacks in progress before any real damage is done.</p>
+
+      <h3>Set Up Admin Activity Alerts</h3>
+      <p>Any time someone makes a change to admin settings &mdash; adding a new admin, changing a policy, modifying mail flow rules &mdash; you should get an alert. Legitimate admin changes are infrequent and predictable. If you're getting alerts about admin changes you didn't authorize, you have a problem that needs immediate attention.</p>
+
+      <h2>Section 5: Device Management (Medium Priority)</h2>
+      <p>Your data is only as secure as the devices that access it. If an employee checks email on an unmanaged personal phone that gets lost or stolen, your company data goes with it.</p>
+
+      <h3>Require Managed Devices for Access (If Possible)</h3>
+      <p>The ideal scenario is that only company-managed devices can access company data. Conditional access policies can enforce this. In practice, many small businesses allow BYOD (bring your own device), and that's a reality you can work with &mdash; but you need app protection policies (see below) to compensate.</p>
+
+      <h3>Set Up Basic Mobile Device Management</h3>
+      <p>Basic MDM is built into M365 Business Premium at no extra cost. It lets you enforce device-level security requirements: require a PIN to unlock the device, require encryption, block jailbroken or rooted devices. It's not as full-featured as Intune, but it covers the basics and it's already included in your license.</p>
+
+      <h3>Configure App Protection Policies</h3>
+      <p>App protection policies protect company data within apps, even on personal devices. They can prevent copy/paste of company data into personal apps, require a PIN to open Outlook or Teams, and encrypt company data on the device. This is the right approach for BYOD environments &mdash; you protect the data without controlling the entire device.</p>
+
+      <h3>Remote Wipe Capability for Lost or Stolen Devices</h3>
+      <p>When a phone gets lost or a laptop gets stolen, you need to be able to remove company data from it immediately. With MDM or app protection policies configured, you can do a selective wipe (removing only company data) or a full wipe (resetting the entire device). Make sure this capability is configured before you need it &mdash; not after a device goes missing.</p>
+
+      <h2>Section 6: Backup (Critical &mdash; Often Missed)</h2>
+      <p>This is the one that catches most businesses off guard. Read it carefully.</p>
+
+      <h3>Microsoft Does NOT Back Up Your Data</h3>
+      <p>Let that sink in. Microsoft's responsibility is to keep the platform running &mdash; the servers, the infrastructure, the availability. Your data, your configuration, your mailboxes, your files &mdash; that's your responsibility. It's called the shared responsibility model, and it's in the service agreement you signed when you set up your tenant.</p>
+      <p>If a user permanently deletes files, if a ransomware attack encrypts your SharePoint, if an admin accidentally wipes a mailbox &mdash; Microsoft is under no obligation to recover that data for you. They have limited retention windows, but they're not backups and they're not guaranteed.</p>
+
+      <h3>What Needs Backing Up</h3>
+      <p>Everything in your M365 tenant that matters to your business:</p>
+      <ul>
+        <li><strong>Exchange Online</strong> &mdash; email, contacts, calendars</li>
+        <li><strong>OneDrive for Business</strong> &mdash; individual user files</li>
+        <li><strong>SharePoint Online</strong> &mdash; team sites, document libraries, lists</li>
+        <li><strong>Teams</strong> &mdash; conversations, files, channel data</li>
+      </ul>
+
+      <h3>Retention Policies Are NOT Backups</h3>
+      <p>We hear this all the time: "We have retention policies, so we're covered." No, you're not. Retention policies control how long data is kept before it's automatically purged. They're a compliance tool, not a recovery tool. If you need to restore a mailbox to how it looked three weeks ago, a retention policy can't do that. If you need to recover a SharePoint site that was ransomware-encrypted, a retention policy won't help. You need actual backup &mdash; a separate copy of your data, stored outside of Microsoft 365, that you can restore from.</p>
+      <p>For a deeper dive on this topic, read our blog post: <a href="/blog-microsoft-365-backup.html">Does Microsoft Back Up Your Data? (No. Here's What to Do About It.)</a></p>
+    </div>
+  </section>
+
+  <!-- Summary Checklist -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:900px;">
+      <div class="section-label">Summary</div>
+      <h2>M365 Security Hardening Checklist</h2>
+      <p>Print this out. Hand it to your IT person. Check things off as they get done.</p>
+      <table class="compare-table">
+        <thead>
+          <tr><th>Priority</th><th>Setting</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="warn">Critical</td><td>Enable MFA for ALL users</td><td class="x">&#9744;</td></tr>
+          <tr><td class="warn">Critical</td><td>Use dedicated admin accounts</td><td class="x">&#9744;</td></tr>
+          <tr><td class="warn">Critical</td><td>Disable legacy authentication protocols</td><td class="x">&#9744;</td></tr>
+          <tr><td class="warn">Critical</td><td>Set up conditional access / security defaults</td><td class="x">&#9744;</td></tr>
+          <tr><td class="warn">Critical</td><td>Review and remove unused admin roles</td><td class="x">&#9744;</td></tr>
+          <tr><td class="warn">Critical</td><td>Configure M365 backup (third-party)</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Block auto-forwarding to external domains</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Enable Safe Links and Safe Attachments</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Set up anti-phishing policies</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Review mail flow rules for suspicious forwarding</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Configure DMARC, DKIM, and SPF</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Review external sharing settings (SharePoint/OneDrive)</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Disable or expire anonymous sharing links</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Enable sensitivity labels</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Configure data loss prevention policies</td><td class="x">&#9744;</td></tr>
+          <tr><td class="check">High</td><td>Review guest access permissions</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Turn on unified audit logging</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Enable mailbox auditing</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Set up suspicious activity alerts</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Schedule monthly sign-in log review</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Set up admin activity alerts</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Set up mobile device management</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Configure app protection policies</td><td class="x">&#9744;</td></tr>
+          <tr><td>Medium</td><td>Enable remote wipe capability</td><td class="x">&#9744;</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Want Us to Audit Your M365 Tenant?</h2>
+      <p>We'll review your Microsoft 365 security settings, identify the gaps, and give you a prioritized action plan &mdash; in plain English. The initial assessment is free.</p>
+      <a href="/#contact" class="cta-btn">Request a Free M365 Security Review</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+        <a href="/m365-security-checklist.html">M365 Security Checklist</a>
+        <a href="/onboarding-offboarding-checklist.html">Onboarding Checklist</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var t=document.querySelector(this.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>

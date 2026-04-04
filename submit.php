@@ -31,9 +31,15 @@ $_SESSION['last_submit'] = $now;
 $to = 'himuraken@gmail.com';
 
 $sourceLabels = [
-    'cybersecurity-guide' => 'Cybersecurity Guide Download',
-    'it-buyers-guide'     => 'IT Buyer\'s Guide Download',
-    'cost-reduction'      => 'Cost Reduction Inquiry',
+    'cybersecurity-guide'            => 'Cybersecurity Guide Download',
+    'it-buyers-guide'                => 'IT Buyer\'s Guide Download',
+    'cost-reduction'                 => 'Cost Reduction Inquiry',
+    'disaster-recovery-template'     => 'DR Template Download',
+    'it-provider-scorecard'          => 'IT Provider Scorecard Download',
+    'm365-security-checklist'        => 'M365 Security Checklist Download',
+    'onboarding-offboarding-checklist' => 'Onboarding/Offboarding Checklist Download',
+    'm365-licensing-guide'           => 'M365 Licensing Guide Download',
+    'vmware-exit-playbook'           => 'VMware Exit Playbook Download',
 ];
 $sourceLabel = isset($sourceLabels[$source]) ? $sourceLabels[$source] : 'Consultation Request';
 $subject = "[$sourceLabel] $name" . ($company ? " ($company)" : "");
