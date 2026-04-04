@@ -28,7 +28,7 @@ if (isset($_SESSION['last_submit']) && ($now - $_SESSION['last_submit']) < 60) {
 $_SESSION['last_submit'] = $now;
 
 // Build email
-$to = 'himuraken@gmail.com';
+$to = 'himuraken@gmail.com, aib@junopi.com';
 
 $sourceLabels = [
     'cybersecurity-guide'            => 'Cybersecurity Guide Download',
