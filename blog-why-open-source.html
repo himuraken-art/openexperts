@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why We Use Open Source (And Why You Should Care) | Open Experts</title>
+  <meta name="description" content="Open source isn't sketchy free software — it runs the internet. Here's what it actually means for your business's bottom line, and why we build on it instead of proprietary alternatives.">
+  <meta name="keywords" content="open source for business, open source vs proprietary, free business software, open source IT infrastructure, Linux for business, pfSense, Proxmox, TrueNAS">
+  <link rel="canonical" href="https://openexperts.tech/blog-why-open-source.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Why We Use Open Source (And Why You Should Care)">
+  <meta property="og:description" content="Open source isn't sketchy free software — it runs the internet. Here's what it actually means for your business's bottom line.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-why-open-source.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Why We Use Open Source (And Why You Should Care)",
+    "description": "Open source isn't sketchy free software — it runs the internet. Here's what it actually means for your business's bottom line, and why we build on it instead of proprietary alternatives.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-04-27",
+    "mainEntityOfPage": "https://openexperts.tech/blog-why-open-source.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Why We Use Open Source<br><em>(And Why You Should Care)</em></h1>
+    <p>It's not "free software from the internet." It's the technology that runs most of the world's infrastructure &mdash; and it might be the single best way to lower your IT costs without sacrificing reliability.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>When we tell a new client that we're going to build their infrastructure on open source technology, we almost always get the same look. A slight hesitation. Maybe a polite "is that... safe?" Sometimes a more direct "I've heard open source can be unreliable."</p>
+
+      <p>We get it. The name sounds informal. "Free software" sounds like something your nephew downloads from a sketchy website. And if your mental image of open source is a teenager's hobby project hosted on some obscure forum, we understand the skepticism.</p>
+
+      <p>But here's the reality: open source software runs the majority of the internet. It's behind every major cloud provider &mdash; Amazon, Google, Microsoft. It powers the servers that process your bank transactions, your credit card payments, your medical records. The phone in your pocket runs an open source operating system. The router your ISP uses to deliver your internet connection almost certainly runs open source software at its core.</p>
+
+      <p>This isn't a niche technology choice. It's the foundation of modern computing. And once you understand what that actually means for your business, the picture looks very different from what you might expect.</p>
+    </div>
+  </section>
+
+  <!-- What Is Open Source -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Basics</div>
+      <h2>What "Open Source" Actually Means</h2>
+
+      <p>Let's clear this up once and for all. Open source doesn't mean "free" in the way that a promotional t-shirt is free. It means the source code &mdash; the underlying instructions that make the software work &mdash; is publicly available for anyone to read, use, modify, and distribute.</p>
+
+      <p>That sounds technical, but the practical implications are straightforward. Because the code is visible to everyone, it gets reviewed by thousands of developers all over the world. Bugs get spotted and fixed faster. Security vulnerabilities get patched by people who have a stake in keeping the software solid. There's no single company's internal team working in a closed room and hoping they caught everything.</p>
+
+      <p>Compare that to proprietary software, where you're trusting that the vendor's internal team is doing a thorough job &mdash; and you have no way to verify it. When a flaw gets discovered, you're waiting on that one company's release schedule, not a global community of contributors who want it fixed yesterday.</p>
+
+      <p>Open source software is also free of licensing fees in most cases &mdash; but that's almost a side effect of the model, not the point. The real value is what the open development model does to software quality over time.</p>
+    </div>
+  </section>
+
+  <!-- The Cost Argument -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Business Case</div>
+      <h2>The Licensing Cost Savings Are Very Real</h2>
+
+      <p>That said, let's talk money, because this is where small businesses feel the impact most directly.</p>
+
+      <p>A few years ago, VMware was the standard choice for running virtual servers in a small business environment. Then Broadcom acquired them and immediately restructured their licensing in a way that increased costs dramatically for smaller customers &mdash; in many cases by 300 to 500 percent. Businesses that had budgeted around VMware suddenly got invoices they couldn't absorb.</p>
+
+      <p>We'd been building on <a href="/proxmox-migration.html" style="color:var(--primary);">Proxmox VE</a> for years at that point &mdash; an open source virtualization platform that does everything VMware does for most small business workloads, with no per-CPU licensing fees. Our clients didn't feel a thing when the VMware pricing changed. Their budgets stayed intact.</p>
+
+      <p>The same pattern plays out across the stack:</p>
+
+      <ul>
+        <li><strong>Firewall:</strong> pfSense or OPNsense vs. a Cisco or Palo Alto appliance. Comparable capability for a fraction of the cost. (We write more about this in our post on <a href="/blog-consumer-router-firewall.html" style="color:var(--primary);">why your firewall is probably a consumer router</a>.)</li>
+        <li><strong>Network-attached storage:</strong> TrueNAS vs. proprietary NAS vendors that charge per-drive or per-terabyte licensing. TrueNAS is free; the only cost is the hardware.</li>
+        <li><strong>Server operating system:</strong> Linux vs. Windows Server licensing. For many workloads, Linux is more stable, more efficient, and costs nothing in licensing.</li>
+        <li><strong>Monitoring:</strong> Tools like Zabbix and Grafana give enterprise-grade visibility into your infrastructure without the enterprise-grade price tag.</li>
+      </ul>
+
+      <p>When you add up the licensing savings across a typical small business IT stack, you're often looking at thousands of dollars per year &mdash; sometimes tens of thousands. That money either goes back to your bottom line or gets reinvested in hardware that you actually own.</p>
+    </div>
+  </section>
+
+  <!-- Security and Quality -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">A Common Misconception</div>
+      <h2>Open Source Isn't Less Secure &mdash; It's Often More Secure</h2>
+
+      <p>This is the one that surprises people most. The assumption is that if anyone can see the code, anyone can find the vulnerabilities. And that's true &mdash; but the same applies to the people who are trying to <em>fix</em> those vulnerabilities.</p>
+
+      <p>In a closed, proprietary system, security researchers who find flaws have to report them to the vendor and hope they respond. Sometimes they do, promptly. Sometimes the patch takes months. Sometimes the vendor quietly silences the disclosure. You're depending entirely on one company's internal security culture and incentive structure.</p>
+
+      <p>In an open source project with a large community, security researchers can submit fixes directly. Independent audits happen all the time, often funded by organizations who depend on the software. When a flaw is found, the fix is visible to everyone, and you can verify that it actually addresses the problem rather than just taking the vendor's word for it.</p>
+
+      <p>This is why the most security-conscious organizations in the world &mdash; governments, financial institutions, defense contractors &mdash; run significant portions of their infrastructure on open source. Not because it's cheap (though it often is), but because the transparency is actually a security feature.</p>
+
+      <p>That said, "open source" isn't a blanket guarantee of quality. There are excellent open source projects and there are poorly maintained ones. Part of our job is knowing the difference &mdash; and only recommending tools that have active development communities, regular security updates, and strong track records.</p>
+    </div>
+  </section>
+
+  <!-- Vendor Lock-In -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Your Infrastructure, Your Data</div>
+      <h2>No Vendor Lock-In Means You Stay in Control</h2>
+
+      <p>Here's a scenario we've seen play out more times than we'd like. A business builds their entire IT infrastructure around a proprietary vendor's ecosystem. Everything works fine for years. Then the vendor gets acquired, changes their pricing, discontinues a product, or simply goes out of business. Suddenly the business is stuck &mdash; deeply dependent on technology that's changing under their feet, with expensive and disruptive migration as the only way out.</p>
+
+      <p>This is called vendor lock-in, and it's one of the quieter risks in the IT world. We wrote a deeper piece on <a href="/blog-vendor-lock-in.html" style="color:var(--primary);">how vendor lock-in costs businesses thousands</a> if you want the full picture.</p>
+
+      <p>Open source largely eliminates this risk. The software is yours to use regardless of what any single company decides. If the company behind a commercial open source product gets acquired and changes direction, the open source version doesn't disappear &mdash; the community forks it, continues development, and the ecosystem carries on. This has happened multiple times in IT history, and the open source community has consistently proven resilient.</p>
+
+      <p>More practically: when your systems run on open source technology, any qualified IT professional in the world can support them. You're not locked into a relationship with a single vendor or a single IT provider who happens to know proprietary systems. That gives you leverage, options, and peace of mind.</p>
+    </div>
+  </section>
+
+  <!-- The Support Question -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Fair Question</div>
+      <h2>"But What Happens When Something Breaks?"</h2>
+
+      <p>This is the honest question, and it deserves an honest answer.</p>
+
+      <p>The perception is that proprietary software comes with support and open source doesn't. That's mostly a myth. Large open source projects like Proxmox, pfSense, TrueNAS, and Linux all have commercial support options available &mdash; paid support contracts with real humans who respond to problems. Many enterprises run their entire infrastructure on open source with commercial support backing it up.</p>
+
+      <p>But more to the point: for most small businesses, the "support" that matters is the support from whoever manages your IT. Whether your firewall runs pfSense or a proprietary OS, you need an IT person who knows how to configure it, monitor it, and fix it when something goes wrong. The operating system underneath is almost irrelevant from a support standpoint &mdash; what matters is the expertise of the person managing it.</p>
+
+      <p>We've been working with these tools for years. We know them deeply. And because they're open source, the troubleshooting resources available &mdash; documentation, community forums, known-issue databases &mdash; are often more comprehensive than what you'd find for a proprietary product. When something unusual happens, we're searching the same databases that thousands of other engineers around the world contribute to, not waiting on a vendor's support ticket queue.</p>
+
+      <p>Is there a learning curve? Yes. Are there situations where a specific proprietary tool does something better than any open source alternative? Also yes &mdash; we'll always tell you when that's the case and recommend the right tool for the job, regardless of whether it's open source. We have no ideological commitment to open source for its own sake. We use it because it consistently delivers the best outcomes for small business clients.</p>
+    </div>
+  </section>
+
+  <!-- What This Means -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Bottom Line</div>
+      <h2>What This Actually Means for Your Business</h2>
+
+      <p>Let's bring this back to practical terms. If we're managing your IT and we recommend an open source solution, here's what you can generally expect:</p>
+
+      <p><strong>Lower ongoing costs.</strong> No licensing fees that can spike when a vendor decides to restructure their pricing. No per-seat, per-CPU, or per-terabyte fees that grow unpredictably as your business grows. What you pay for is hardware, configuration, and ongoing management &mdash; things that are transparent and predictable.</p>
+
+      <p><strong>Infrastructure you own.</strong> The software running your servers isn't licensed to you by a third party who could change the terms. It runs on your hardware, and if you ever decide to change IT providers, the next provider can take over without starting from scratch on proprietary systems they don't know.</p>
+
+      <p><strong>Proven reliability.</strong> We don't experiment on clients. The open source tools we use &mdash; Proxmox for virtualization, TrueNAS for storage, pfSense and OPNsense for network security, Linux for servers &mdash; have track records measured in decades and deployments measured in millions. These aren't experiments; they're battle-tested platforms.</p>
+
+      <p><strong>Security built on transparency.</strong> Open code means open scrutiny. Flaws get found and fixed faster. You're not trusting a black box; you're running on technology that the global security community actively maintains and improves.</p>
+
+      <p>None of this means we'll force open source into situations where it doesn't fit. If your business runs a specialized application that only works on Windows Server, you run Windows Server. If Microsoft 365 is the right collaboration platform for your team &mdash; and for most businesses it is &mdash; you use Microsoft 365. The goal is always the right tool for the job.</p>
+
+      <p>But when the choice is genuinely open &mdash; when open source and proprietary options both meet your needs &mdash; we'll almost always reach for open source. Because after 30+ years of doing this, we've seen what happens when businesses depend on software they don't control, and what happens when they build on platforms that have a proven track record of stability and community-driven improvement. The evidence is pretty clear.</p>
+
+      <p>If you're curious whether your current IT stack is costing you more than it should &mdash; or whether there are open source alternatives that might serve you better &mdash; that's exactly the kind of thing we're happy to walk through with you, no strings attached. Take a look at our <a href="/services.html" style="color:var(--primary);">services page</a> or check out our <a href="/it-buyers-guide.html" style="color:var(--primary);">IT Buyer's Guide</a> for more context on how to evaluate your options.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Wondering If You're Overpaying for Proprietary Software?</h2>
+      <p>We'll take an honest look at your current IT stack and tell you where open source alternatives might save you money &mdash; and where they wouldn't. No agenda, just straight answers.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>

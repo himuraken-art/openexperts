@@ -41,7 +41,7 @@
       "title": "Why We Use Open Source (And Why You Should Care)",
       "keywords": "open source for business, open source vs proprietary, free business software",
       "angle": "Demystify open source. It's not sketchy free software. It powers the internet. Explain why it matters for their bottom line.",
-      "used": false
+      "used": true
     },
     {
       "slug": "consumer-router-firewall",
