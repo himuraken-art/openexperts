@@ -48,7 +48,7 @@
       "title": "Your Firewall Is Probably a Consumer Router. Here's Why That's a Problem.",
       "keywords": "business firewall, consumer router vs firewall, pfSense small business, network security",
       "angle": "Most small businesses are running a $60 router as their only protection. Explain what a real firewall does and why it matters.",
-      "used": false
+      "used": true
     },
     {
       "slug": "cyber-insurance",

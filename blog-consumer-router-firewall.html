@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Firewall Is Probably a Consumer Router. Here's Why That's a Problem. | Open Experts</title>
+  <meta name="description" content="Most small businesses are running a $60 consumer router as their only network protection. Here's what that actually means, what a real firewall does, and how to fix it without breaking the bank.">
+  <meta name="keywords" content="business firewall, consumer router vs firewall, pfSense small business, network security, OPNsense, small business firewall, firewall vs router">
+  <link rel="canonical" href="https://openexperts.tech/blog-consumer-router-firewall.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Your Firewall Is Probably a Consumer Router. Here's Why That's a Problem.">
+  <meta property="og:description" content="Most small businesses are running a $60 consumer router as their only network protection. Here's what a real firewall does — and why the difference matters.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-consumer-router-firewall.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Firewall Is Probably a Consumer Router. Here's Why That's a Problem.",
+    "description": "Most small businesses are running a $60 consumer router as their only network protection. Here's what that actually means, what a real firewall does, and how to fix it without breaking the bank.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-05-11",
+    "mainEntityOfPage": "https://openexperts.tech/blog-consumer-router-firewall.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Your Firewall Is Probably a Consumer Router.<br><em>Here's Why That's a Problem.</em></h1>
+    <p>You might think you have a firewall protecting your business network. For most small businesses, that &ldquo;firewall&rdquo; is a $60 router from a big box store. Here's what that actually means &mdash; and what to do about it.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>We've been doing this for over 30 years. And one of the most common things we see when we first walk into a small business is a consumer-grade router &mdash; Netgear, Linksys, ASUS, TP-Link, whatever was on sale &mdash; sitting at the edge of the network, doing the job that a real firewall should be doing.</p>
+
+      <p>Nobody set out to do this. Usually it went something like: your ISP gave you a modem, you needed Wi-Fi, you bought a router, and things worked. Or maybe your IT person set it up years ago and it's just always been there. The router has a &ldquo;firewall&rdquo; checkbox in its settings menu. Someone checked the box. Everyone figured you were covered.</p>
+
+      <p>You're not. Not really. And understanding why matters a lot more than most business owners realize until something goes wrong.</p>
+    </div>
+  </section>
+
+  <!-- What Your Router Actually Is -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Reality</div>
+      <h2>What Your Router Actually Is (and Isn't)</h2>
+
+      <p>Let me be clear about something: your consumer router does have a basic form of protection built in. It does Network Address Translation (NAT), which means your internal devices share one public IP address and unsolicited inbound traffic from the internet gets dropped. That does provide a layer of protection.</p>
+
+      <p>But NAT is about as basic as it gets. It's not really a firewall &mdash; it's a side effect of how home routing works. And &ldquo;drops unsolicited inbound traffic&rdquo; is the bare minimum. The real threats hitting businesses today don't come from someone trying to knock on your front door.</p>
+
+      <p>They come in through what you invite in: email attachments, websites your employees visit, compromised software updates, phishing links. They come in through the stuff your router happily passes through because it looks like perfectly normal traffic. Your consumer router has essentially no ability to tell the difference between legitimate traffic and malicious traffic riding along inside it.</p>
+
+      <p>If you're already thinking about how bad actors actually get in, our <a href="/cybersecurity-guide.html">cybersecurity guide for small businesses</a> covers the full picture. But your network edge &mdash; that router at the front door &mdash; is where a lot of this could be stopped before it becomes your problem.</p>
+    </div>
+  </section>
+
+  <!-- What a Real Firewall Does -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">What You're Missing</div>
+      <h2>What a Real Business Firewall Actually Does</h2>
+
+      <p>A real firewall &mdash; something like pfSense, OPNsense, or a commercial option from Fortinet or SonicWall &mdash; is a completely different class of device. Here's what it can do that your consumer router can't:</p>
+
+      <h3>Deep Packet Inspection</h3>
+      <p>Instead of just looking at where traffic is coming from and going to, a real firewall looks inside the packets. It can identify what application is actually running, what protocol is being used, and whether the contents look malicious &mdash; even inside encrypted traffic. Your consumer router sees a stream of bytes and passes them along. A business firewall understands what it's looking at.</p>
+
+      <h3>Intrusion Detection and Prevention (IDS/IPS)</h3>
+      <p>A real firewall maintains active threat intelligence. It knows what ransomware command-and-control traffic looks like. It knows what port scans look like. It knows when something on your network is trying to reach a known malicious server. And it can block it automatically, in real time. Consumer routers don't have any of this. They have no concept of &ldquo;threat&rdquo; &mdash; traffic is either allowed or blocked based on simple rules.</p>
+
+      <h3>Content Filtering</h3>
+      <p>You can control what your network actually allows. Block known malware distribution sites. Block categories of sites that put your business at risk. This isn't about spying on employees &mdash; it's about reducing your attack surface. A business firewall can stop a malicious download before it ever reaches the employee's machine.</p>
+
+      <h3>Comprehensive Logging and Visibility</h3>
+      <p>When something goes wrong on your network, do you have any idea what happened? A business firewall logs everything: what connected to what, when, from where, and what happened. Consumer routers keep minimal logs, and most people never look at them anyway. Good logs mean the difference between &ldquo;we got hacked somehow&rdquo; and &ldquo;here's exactly what happened and here's how we stop it from happening again.&rdquo;</p>
+
+      <h3>Proper VPN for Remote Workers</h3>
+      <p>A real firewall handles VPN properly &mdash; strong encryption, user authentication tied to your directory, and granular access controls. The VPN on consumer routers is usually an afterthought: often outdated protocols, no logging, and no integration with your actual user accounts. If your remote workers are connecting through a consumer router VPN, that's a separate problem worth addressing.</p>
+
+      <h3>Network Segmentation (VLANs)</h3>
+      <p>Your security cameras, smart TVs, and IoT devices shouldn't be on the same network as your business data and your point-of-sale system. A business firewall makes VLAN setup and enforcement straightforward. Properly segmenting your network is one of the most effective things you can do to limit the damage if something does get in. If you want to understand why this matters for IoT devices specifically, we cover it in depth in our post on <a href="/blog-security-cameras-network.html">security cameras and network segmentation</a>.</p>
+    </div>
+  </section>
+
+  <!-- The Real Risk -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">A Real Scenario</div>
+      <h2>The Risk You're Actually Running</h2>
+
+      <p>Let me give you a concrete scenario, because abstract security talk doesn't really land until you can picture it.</p>
+
+      <p>A ransomware group targets businesses in your industry. They send a targeted phishing email to one of your employees. The employee clicks a link, which downloads a payload that looks like a routine software update. The payload runs quietly in the background, calling home to a command-and-control server to receive its instructions. Then it starts moving laterally across your network, encrypting files as it goes.</p>
+
+      <p>Your consumer router sees none of this. Every step of that attack uses traffic that looks perfectly normal to a NAT-based router. The malicious payload came in over HTTPS. The command-and-control connection goes out over HTTPS. The lateral movement uses standard Windows file sharing, which you need for your business to operate.</p>
+
+      <p>A real firewall with IDS/IPS would have flagged the command-and-control connection &mdash; that server is on known malicious IP lists, and the traffic pattern is distinctive. With content filtering, the malicious download site might have been blocked before the employee even saw it. With network segmentation, the lateral movement would have been contained to one segment instead of spreading across everything.</p>
+
+      <p>This isn't a worst-case hypothetical. It's a realistic scenario that plays out at small businesses every single day. The question isn't whether these threats exist &mdash; they do. The question is whether your network is set up to see them coming.</p>
+
+      <p>And it's not just ransomware. A compromised machine on your network could be quietly exfiltrating customer data for months. A poorly secured IoT device could be relaying traffic for a botnet. None of these show up on your consumer router because it has no way to look for them.</p>
+    </div>
+  </section>
+
+  <!-- What Business-Grade Looks Like -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Good News</div>
+      <h2>Business-Grade Protection Doesn't Have to Cost a Fortune</h2>
+
+      <p>Here's something a lot of people don't know: you don't need to spend thousands of dollars on enterprise gear to get real firewall protection. This is an area where open source has made enterprise-grade security genuinely accessible to businesses of any size.</p>
+
+      <p><strong>pfSense and OPNsense</strong> are open source firewall platforms that run on inexpensive hardware &mdash; a capable mini PC runs $200&ndash;$400 &mdash; and provide every feature we've described above. IDS/IPS, content filtering, VPN, VLAN support, comprehensive logging, all of it. We use and recommend these regularly because they give small businesses access to the same quality of protection that large enterprises use, without the licensing costs that come with commercial alternatives. This is core to <a href="/blog-why-open-source.html">why we use open source for our clients</a>.</p>
+
+      <p>If you'd rather have hardware with vendor support, <strong>Fortinet's FortiGate</strong> line has solid small-business options in the $300&ndash;$600 range with reasonably priced subscription updates for threat intelligence. Sophos and SonicWall are also legitimate business-grade options at comparable price points.</p>
+
+      <p>The right answer depends on your team, your tolerance for configuration work, and your budget. But all of these are dramatically better than a consumer router &mdash; and the cost difference is far smaller than most people expect.</p>
+
+      <h3>One Important Caveat</h3>
+      <p>A firewall is not a set-it-and-forget-it device. It needs to be kept updated, and its threat intelligence signatures need to stay current. An outdated firewall is better than no firewall, but not by as much as you'd hope. Threat signatures that are six months old might as well not exist for the threats that emerged in those six months. This is one of the places where having competent ongoing IT management &mdash; not just a one-time install &mdash; makes a genuine difference to your security posture. You can read more about what that kind of proactive relationship looks like in our <a href="/services.html">services overview</a>.</p>
+    </div>
+  </section>
+
+  <!-- What To Do -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Next Steps</div>
+      <h2>What You Should Do About This</h2>
+
+      <p>First: find out what's actually at your network edge. This is usually easy to determine. Look for the device that your internet connection comes into, and trace the cable from your ISP modem. Whatever sits between that modem and your internal network is your &ldquo;firewall.&rdquo; If it says Netgear, Linksys, ASUS, TP-Link, or a similar consumer brand, you're in the situation we're describing.</p>
+
+      <p>Second: have a conversation with your IT provider about upgrading to a business-grade firewall. It should be a relatively straightforward project &mdash; typically a few hours of work with no meaningful disruption to your operations. The hardware cost is real but reasonable. The ongoing management cost is part of any competent IT relationship.</p>
+
+      <p>If your IT provider tells you a consumer router is &ldquo;good enough,&rdquo; push back. Ask them specifically what intrusion detection it provides. Ask how they'd know if something on your network was communicating with a command-and-control server. Ask what the logging looks like. If they can't answer those questions, or they brush them off, that's worth a second opinion.</p>
+
+      <p>Third: if you're not sure what you have or what you need, a basic network assessment will answer all of these questions clearly. We do them regularly as part of our onboarding, and we're happy to do a free one-hour conversation with any business owner who wants to understand where they stand. No obligation, no sales pitch &mdash; just an honest read on your situation.</p>
+
+      <p>Your network edge is the first line of defense for everything your business runs on. It deserves something better than the device you'd buy to get Wi-Fi in a vacation rental.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Not Sure What's Protecting Your Network?</h2>
+      <p>We'll take a look and give you a straight answer &mdash; no strings attached. Sometimes a quick conversation is all it takes to know where you stand and what, if anything, needs to change.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Network Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
