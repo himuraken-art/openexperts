@@ -69,7 +69,7 @@
       "title": "The Microsoft 365 Settings Most Businesses Get Wrong",
       "keywords": "Microsoft 365 security settings, M365 configuration, Office 365 best practices",
       "angle": "MFA not enabled, sharing defaults too open, no audit logging, retention policies misconfigured. Practical fixes.",
-      "used": false
+      "used": true
     },
     {
       "slug": "password-managers",

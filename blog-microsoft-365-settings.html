@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Microsoft 365 Settings Most Businesses Get Wrong | Open Experts</title>
+  <meta name="description" content="MFA disabled, sharing defaults too open, no audit logging — most M365 tenants are quietly misconfigured. Here are the settings that matter most and how to fix them.">
+  <meta name="keywords" content="Microsoft 365 security settings, M365 configuration, Office 365 best practices, M365 MFA, Microsoft 365 audit logging, M365 sharing settings">
+  <link rel="canonical" href="https://openexperts.tech/blog-microsoft-365-settings.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="The Microsoft 365 Settings Most Businesses Get Wrong">
+  <meta property="og:description" content="MFA disabled, sharing defaults too open, no audit logging — most M365 tenants are quietly misconfigured. Here are the settings that matter most and how to fix them.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-microsoft-365-settings.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Microsoft 365 Settings Most Businesses Get Wrong",
+    "description": "MFA disabled, sharing defaults too open, no audit logging — most M365 tenants are quietly misconfigured. Here are the settings that matter most and how to fix them.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-06-01",
+    "mainEntityOfPage": "https://openexperts.tech/blog-microsoft-365-settings.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>The Microsoft 365 Settings<br><em>Most Businesses Get Wrong</em></h1>
+    <p>You're paying for Microsoft 365. You're probably not configured for it. Here's what we find in almost every tenant we audit &mdash; and exactly how to fix each one.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>Microsoft 365 is the backbone of most small businesses we work with &mdash; email, files, Teams, the whole stack. And that's exactly why it's such a critical target for attackers. When your M365 tenant gets compromised, it's not just email at risk. It's your entire business communication history, your documents, your contacts, and in many cases a direct path into your financial systems through business email compromise.</p>
+
+      <p>Here's the frustrating part: most of the damage is preventable. Not with expensive software or complicated configurations &mdash; with a handful of settings that are either disabled by default or left misconfigured during setup. We do M365 security audits as part of our onboarding process with new clients, and we find the same problems over and over again, regardless of business size.</p>
+
+      <p>I'm going to walk you through the six settings we find misconfigured most often. Some of these take five minutes to fix. All of them matter more than you'd think.</p>
+    </div>
+  </section>
+
+  <!-- Setting 1 -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #1</div>
+      <h2>Multi-Factor Authentication Is Not Enforced for Everyone</h2>
+
+      <p>This is the big one. Stolen passwords are behind the overwhelming majority of M365 account compromises we see. An attacker buys a credential dump off the dark web, tries your email address with a few common passwords, and they're in. If that sounds far-fetched, it isn't &mdash; it happens to small businesses every single week.</p>
+
+      <p>Multi-factor authentication (MFA) stops this cold. Even if an attacker has your password, they can't log in without the second factor &mdash; typically a code from an authenticator app on your phone. Microsoft's own data puts the success rate at blocking 99.9% of account compromise attacks. That's not a small improvement. That's essentially a solved problem, if you turn it on.</p>
+
+      <p>So why do so many businesses have it off? A few reasons. Microsoft doesn't enforce it by default on all plans. Some IT people set it up for admins but leave regular users unprotected. And plenty of businesses had someone set up M365 years ago and never revisited the security settings.</p>
+
+      <h3>How to Check and Fix It</h3>
+      <p>Log into the Microsoft 365 admin center at admin.microsoft.com. Go to <strong>Users &rarr; Active Users</strong> and look for "Multi-factor authentication" in the top menu. From there you can see who has it enabled and who doesn't.</p>
+
+      <p>Better yet, if you're on Microsoft 365 Business Premium, use <strong>Security Defaults</strong> or full <strong>Conditional Access policies</strong>. Security Defaults is the quick win &mdash; it enables MFA for all users and blocks legacy authentication in one click. Go to the Azure Active Directory admin center, navigate to Properties, and look for "Manage Security Defaults" at the bottom.</p>
+
+      <p>Yes, this requires your team to set up an authenticator app. Yes, a few people will grumble. Do it anyway. The inconvenience of MFA is nothing compared to the disruption of a compromised account.</p>
+    </div>
+  </section>
+
+  <!-- Setting 2 -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #2</div>
+      <h2>Legacy Authentication Protocols Are Still Enabled</h2>
+
+      <p>This one is less obvious but surprisingly dangerous. "Legacy authentication" refers to older email protocols &mdash; things like basic SMTP authentication, POP3, IMAP, and older Exchange ActiveSync connections &mdash; that don't support modern authentication methods, including MFA.</p>
+
+      <p>Here's why that matters: if legacy authentication is enabled on your tenant, an attacker can bypass MFA entirely by connecting via one of these older protocols. They just need your username and password. Your MFA requirement doesn't apply to that connection path at all.</p>
+
+      <p>We've seen this be the exact vector attackers used to get into tenants that had MFA enabled. The business thought they were protected. Legacy authentication was still on. The attacker knew to look for that gap.</p>
+
+      <h3>How to Check and Fix It</h3>
+      <p>In the Azure AD admin center, go to <strong>Security &rarr; Conditional Access</strong> and create a policy that blocks legacy authentication protocols for all users. If you enabled Security Defaults as described above, this is already handled &mdash; one of the reasons Security Defaults is worth enabling if you're not doing full Conditional Access yet.</p>
+
+      <p>Before you block legacy authentication, do a quick check: go to <strong>Azure AD &rarr; Sign-in logs</strong> and filter for "Legacy authentication client" to see if anything in your environment is still using these protocols. Old printers and scanners that email via SMTP are common culprits. Those will need to be updated or reconfigured to use modern authentication or a dedicated SMTP relay before you block legacy auth tenant-wide.</p>
+    </div>
+  </section>
+
+  <!-- Setting 3 -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #3</div>
+      <h2>External Sharing Is Set to "Anyone With a Link"</h2>
+
+      <p>SharePoint and OneDrive make file sharing easy. Almost too easy. The default sharing settings in many M365 tenants allow what Microsoft calls "Anyone" links &mdash; meaning anyone who receives that link, anywhere on the internet, can access the file. No login required. No M365 account needed. Just the link.</p>
+
+      <p>We've had clients share invoices, employee contracts, and customer data this way without realizing the implications. The link goes to one person, that person forwards it, it ends up somewhere unexpected. There's no access log, no expiration, no accountability. It's a file you've effectively published to the internet.</p>
+
+      <p>And it gets worse: if a link like this gets indexed by search engines (it happens more than you'd think), or shared somewhere public, that file is essentially public. We've found sensitive business documents this way during security reviews.</p>
+
+      <h3>How to Check and Fix It</h3>
+      <p>In the SharePoint admin center, go to <strong>Policies &rarr; Sharing</strong>. You'll see an external sharing slider for SharePoint and OneDrive. For most small businesses, the right setting is <strong>"New and existing guests"</strong> at most &mdash; which requires recipients to authenticate before accessing shared files. Even better for sensitive industries: set it to <strong>"Only people in your organization"</strong> and require people to explicitly request exceptions.</p>
+
+      <p>You can also set a default expiration on sharing links (90 days is a reasonable starting point) so old links stop working automatically. That setting lives in the same section under "Advanced settings."</p>
+    </div>
+  </section>
+
+  <!-- Setting 4 -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #4</div>
+      <h2>Audit Logging Isn't Turned On</h2>
+
+      <p>Let me paint a scenario. An employee's account gets compromised. The attacker quietly reads emails for a few weeks, then uses that access to pull off a <a href="/blog-more-than-antivirus.html" style="color:var(--primary);">business email compromise</a> scam. You find out after the fact and need to figure out exactly what they accessed, what they changed, and where they went.</p>
+
+      <p>If audit logging is off, you have almost nothing to work with. You can't tell which mailboxes they accessed. You can't see what files they downloaded from SharePoint. You can't track what email rules they created. Your ability to contain the damage and meet any legal notification obligations is severely hampered.</p>
+
+      <p>Microsoft now enables unified audit logging by default on newer tenants, but plenty of tenants set up before this change still have it off. And even on newer tenants, many businesses don't realize they need to configure what they're logging or how long logs are retained.</p>
+
+      <h3>How to Check and Fix It</h3>
+      <p>In the Microsoft Purview compliance portal (compliance.microsoft.com), go to <strong>Audit</strong>. If you see a banner saying "Start recording user and admin activity," click it. That's audit logging off &mdash; turn it on.</p>
+
+      <p>For retention: by default, audit logs are kept for 90 days on Microsoft 365 Business plans. If you have compliance requirements or just want more runway for incident investigations, Microsoft 365 Business Premium extends this to one year. That's one of the tangible security benefits of the Premium tier that many businesses overlook.</p>
+
+      <p>Also worth enabling: <strong>mailbox auditing</strong> for all users, which logs actions taken on email (including by administrators). In PowerShell: <code>Set-OrganizationConfig -AuditDisabled $false</code>. Your IT person can run this in under five minutes.</p>
+    </div>
+  </section>
+
+  <!-- Setting 5 -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #5</div>
+      <h2>Retention Policies Are Either Missing or Misconfigured</h2>
+
+      <p>Two different businesses, two different problems. One client had no retention policies at all &mdash; a departing employee deleted years of emails and files before leaving, and there was no way to recover them. Another client had a well-meaning IT person set a 30-day retention policy on email, not realizing this would automatically and permanently delete anything older than 30 days from every mailbox in the company. They lost three years of email history before anyone caught it.</p>
+
+      <p>Retention policies determine how long content is kept and what happens to it after that period. Done right, they ensure you meet any legal hold requirements, keep critical business records, and have options for recovery when something is deleted. Done wrong &mdash; or not at all &mdash; they're either a liability or a false sense of security.</p>
+
+      <h3>How to Check and Fix It</h3>
+      <p>Retention policies live in the Microsoft Purview compliance portal under <strong>Data lifecycle management &rarr; Retention policies</strong>. Before you create or change anything, think through three questions:</p>
+
+      <ul>
+        <li><strong>What do you need to keep and for how long?</strong> If you have legal or regulatory requirements (HIPAA, PCI, state laws &mdash; see our <a href="/cybersecurity-guide.html" style="color:var(--primary);">cybersecurity guide</a> for an overview), those drive your minimums. For most small businesses, a seven-year retention on email and financial documents is a reasonable starting point.</li>
+        <li><strong>What do you want to automatically delete?</strong> Some businesses want to purge older content for privacy reasons. Others want to keep everything indefinitely. There's no universal right answer, but there should be an intentional one.</li>
+        <li><strong>Do you have any active legal holds?</strong> If you're in litigation or anticipate it, you need a legal hold on relevant data regardless of your retention policies. That's a separate setting in Purview.</li>
+      </ul>
+
+      <p>If you don't have an IT person who's worked with Purview before, get help with this one. The stakes are high enough that a misconfigured retention policy is genuinely worse than no policy at all.</p>
+    </div>
+  </section>
+
+  <!-- Setting 6 -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Problem #6</div>
+      <h2>Admin Accounts Are Used for Day-to-Day Work</h2>
+
+      <p>This one is a behavior problem as much as a settings problem. We regularly see business owners and IT people using their Global Administrator account &mdash; the account with the keys to the entire M365 kingdom &mdash; as their regular daily-use email account. They check email from it, browse the web on the same machine, maybe even use it for personal stuff.</p>
+
+      <p>The risk is straightforward. If an admin account gets phished or compromised, the attacker doesn't just have access to email. They have full control of the entire M365 tenant. They can create new users, read any mailbox, delete anything, change security settings, and lock everyone else out. We've seen this happen. It's a very bad day.</p>
+
+      <h3>How to Fix It</h3>
+      <p>The fix is simple in concept, if slightly annoying in practice: create dedicated admin accounts that are used only for administration. Something like admin@yourdomain.com, with no email license attached &mdash; just admin privileges. Your IT people log in to that account only when they need to do admin tasks. Their regular @yourdomain.com account has standard user privileges.</p>
+
+      <p>Also on this topic: <strong>limit the number of Global Admins</strong>. Most small businesses only need one or two. Assign the minimum role that actually gets the job done &mdash; Exchange Admin for email management, SharePoint Admin for file management, and so on. The principle of least privilege applies to M365 just as much as any other system.</p>
+    </div>
+  </section>
+
+  <!-- What to Do -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Where to Start</div>
+      <h2>You Don't Have to Fix Everything Today</h2>
+
+      <p>If reading through this list left you feeling like your M365 tenant is a ticking time bomb, take a breath. These are fixable problems. And the highest-impact ones &mdash; MFA and blocking legacy authentication &mdash; can be addressed in an afternoon.</p>
+
+      <p>Here's the order we'd prioritize if you're starting from scratch:</p>
+
+      <p><strong>First, today:</strong> Enable MFA for all users. This one change has the biggest security ROI of anything on this list. If you have Security Defaults available, enable it. If you're on Business Premium, set up Conditional Access policies instead &mdash; they give you more control.</p>
+
+      <p><strong>This week:</strong> Review your external sharing settings and tighten them. Check whether audit logging is on. If it's off, turn it on now so you're capturing activity going forward.</p>
+
+      <p><strong>This month:</strong> Get your retention policies in order. Review your admin accounts and make sure nobody is doing daily work from a Global Admin account. Look at your legacy authentication sign-in logs and develop a plan to block them once you've handled any legacy devices.</p>
+
+      <p>None of this requires expensive add-ons or custom development. It's all configuration work inside tools you're already paying for. If you want help doing a proper M365 security audit, that's something we do as part of our <a href="/services.html" style="color:var(--primary);">managed IT services</a> &mdash; or as a standalone assessment if you just want to know where you stand.</p>
+
+      <p>The uncomfortable truth is that most M365 breaches we see weren't inevitable. They happened because a few default settings were never reviewed. The attackers aren't usually sophisticated &mdash; they're just trying the easy path, and the easy path is often unlocked.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Want Us to Audit Your M365 Tenant?</h2>
+      <p>We'll take a look at your Microsoft 365 configuration and tell you exactly where the gaps are &mdash; no jargon, no upsell pressure, just a clear picture of what needs attention. Takes about an hour. Costs nothing to find out what you're dealing with.</p>
+      <a href="/#contact" class="cta-btn">Get a Free M365 Security Review</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>
