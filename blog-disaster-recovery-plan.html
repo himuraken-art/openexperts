@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Does Your Business Have a Disaster Recovery Plan? (No, a Backup Isn't Enough) | Open Experts</title>
+  <meta name="description" content="Backups are one piece of disaster recovery — not the whole thing. Here's what a real DR plan looks like, including RTO, RPO, who does what, and how to build one for a small business.">
+  <meta name="keywords" content="disaster recovery plan small business, business continuity, DR planning, RTO RPO small business, IT disaster recovery">
+  <link rel="canonical" href="https://openexperts.tech/blog-disaster-recovery-plan.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Does Your Business Have a Disaster Recovery Plan? (No, a Backup Isn't Enough)">
+  <meta property="og:description" content="Backups are one piece of disaster recovery — not the whole thing. Here's what a real DR plan looks like for small businesses.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-disaster-recovery-plan.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Does Your Business Have a Disaster Recovery Plan? (No, a Backup Isn't Enough)",
+    "description": "Backups are one piece of disaster recovery — not the whole thing. Here's what a real DR plan looks like, including RTO, RPO, who does what, and how to build one for a small business.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-06-15",
+    "mainEntityOfPage": "https://openexperts.tech/blog-disaster-recovery-plan.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Does Your Business Have a Disaster Recovery Plan?<br><em>(No, a Backup Isn't Enough)</em></h1>
+    <p>A backup answers "do we have the data?" A disaster recovery plan answers "how do we keep the business running when everything goes sideways?" Those are very different questions.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>Every business owner we talk to says some version of the same thing: "We have backups, so we're covered." And we get it &mdash; backups feel like the responsible thing to have. You set them up, you (hopefully) get the daily confirmation emails, and you sleep a little easier knowing your data is safe somewhere.</p>
+
+      <p>But here's the question we always ask next: if your server died right now, completely, how long would it take to get your business back to fully operational? Not "how long until you have the data back" &mdash; how long until your employees can actually work, your customers can reach you, and your revenue-generating processes are running again?</p>
+
+      <p>Most business owners don't know the answer. And that's exactly the problem. A backup is a piece of data. A disaster recovery plan is the documented, tested process for getting your whole business back on its feet after something goes badly wrong. After 30+ years of helping businesses through everything from ransomware attacks to flooded server rooms, I can tell you: the ones who came through the fastest all had a plan. The ones who suffered the most had only a backup.</p>
+    </div>
+  </section>
+
+  <!-- What DR actually is -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Basics</div>
+      <h2>What Disaster Recovery Actually Means</h2>
+
+      <p>Disaster recovery (DR) is the set of policies, tools, and procedures that enable your business to restore IT operations after a disruptive event. That event could be a ransomware attack, a hardware failure, a power surge, a fire, a flood, or simply an employee accidentally deleting a critical database. The category doesn't matter much &mdash; what matters is how prepared you are to respond.</p>
+
+      <p>Business continuity is the broader concept: not just recovering your IT systems, but keeping your business operational during and after a disruption. DR is a subset of business continuity, focused specifically on the technology side.</p>
+
+      <h3>Two Numbers That Define Your Exposure</h3>
+
+      <p>Before you can build a DR plan, you need to understand two terms. They sound technical, but the concepts are simple and extremely useful.</p>
+
+      <p><strong>Recovery Time Objective (RTO)</strong> is the maximum amount of time your business can be down before the damage becomes unacceptable. How long can you go without your server, your email, your point-of-sale system, before customers leave and revenue stops? For some businesses, that's four hours. For others, it's four days. Your RTO defines how fast your recovery needs to be.</p>
+
+      <p><strong>Recovery Point Objective (RPO)</strong> is the maximum amount of data loss your business can tolerate. If your backups run at midnight and your server crashes at 3pm the next day, you've lost 15 hours of work. Is that acceptable? If not, you need more frequent backups &mdash; maybe every hour, maybe continuous replication. Your RPO defines how often you need to back up.</p>
+
+      <p>Most small businesses have never thought about these numbers explicitly. But they're implicitly making a bet on them every day. Knowing your RTO and RPO lets you design a backup and recovery system that actually matches your business's real needs &mdash; not just whatever someone set up years ago.</p>
+    </div>
+  </section>
+
+  <!-- What can go wrong -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Threats</div>
+      <h2>What You're Actually Planning For</h2>
+
+      <p>A good DR plan accounts for multiple scenarios, because different disasters create different problems. Here are the ones we see most often with small businesses:</p>
+
+      <h3>Hardware Failure</h3>
+      <p>Servers fail. Hard drives fail. The older the hardware, the higher the probability. A good DR plan includes documented steps for what happens when the primary server dies: where do the backups live, how long does a full restore take, who performs it, and what do employees do in the meantime? See our post on <a href="/blog-hardware-lifecycle.html" style="color:var(--primary);">hardware lifecycle planning</a> for how to think about aging infrastructure before it becomes a crisis.</p>
+
+      <h3>Ransomware</h3>
+      <p>This is the one that keeps us up at night. Ransomware encrypts your files and demands payment. If your backup is connected to the same network as your infected systems, it can get encrypted too &mdash; which means your "backup" is also useless. A proper DR plan includes offline or immutable backups that ransomware can't reach, and a tested restore process you know works before you ever need it.</p>
+
+      <h3>Human Error</h3>
+      <p>Someone deletes the wrong folder. Someone overwrites a critical file. Someone drops a database. These aren't dramatic events, but they're the most common data loss scenario we deal with. Your DR plan needs to address how quickly you can restore individual files or folders, not just the whole system.</p>
+
+      <h3>Facility Disasters</h3>
+      <p>Fire, flood, burst pipes, power failures. If your backup drive is sitting next to your server in the same room, a single facility event takes both out simultaneously. Offsite or cloud-based backups aren't optional &mdash; they're the minimum for true disaster recovery.</p>
+
+      <h3>Vendor or Service Outages</h3>
+      <p>What happens if Microsoft 365 goes down for eight hours? If your internet provider goes dark? If a critical cloud service you depend on has an outage? A DR plan doesn't just cover your own systems &mdash; it identifies your key external dependencies and documents what you do when they're unavailable.</p>
+    </div>
+  </section>
+
+  <!-- Building the plan -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Building the Plan</div>
+      <h2>What a Real DR Plan Contains</h2>
+
+      <p>Here's what we include when we build a disaster recovery plan for a small business client. This isn't a 200-page enterprise document &mdash; a working DR plan for a 20-person company might be 8&ndash;12 pages. The point is that it's written down, it's specific, and it's been tested.</p>
+
+      <h3>1. Asset Inventory</h3>
+      <p>What systems, servers, applications, and data sources exist? You can't plan a recovery if you don't know what you're recovering. This includes on-premise hardware, cloud services, SaaS applications, and any critical data that lives on employee laptops.</p>
+
+      <h3>2. Criticality Tiers</h3>
+      <p>Not everything is equally important. Group your systems by how quickly they need to be restored. Tier 1 might be your accounting system and your point-of-sale; without those, you can't do business. Tier 2 might be your file server. Tier 3 might be the HR portal you check twice a month. Recovery resources go to Tier 1 first.</p>
+
+      <h3>3. RTO and RPO for Each Tier</h3>
+      <p>Now assign specific numbers to each tier. Your Tier 1 systems might have a 4-hour RTO and a 1-hour RPO. Your Tier 3 systems might be fine with a 48-hour RTO and a 24-hour RPO. This shapes exactly which backup technology and infrastructure you need.</p>
+
+      <h3>4. Backup Architecture Documentation</h3>
+      <p>What's being backed up, where, how often, and using what tool? This shouldn't live only in your IT provider's head. Document it. This is where we also verify that your backups meet your RPO requirements &mdash; if your RPO is 4 hours but backups run once a day, there's a gap.</p>
+
+      <h3>5. Step-by-Step Recovery Procedures</h3>
+      <p>For each major failure scenario, write out exactly what happens. Who gets called first? What's the step-by-step process to restore systems? Where are the credentials stored? This document should be detailed enough that someone who's never done this before could follow it in a crisis &mdash; because that might be exactly what happens.</p>
+
+      <h3>6. Roles and Responsibilities</h3>
+      <p>Who does what? Who calls the IT provider? Who communicates with customers? Who decides whether to pay a ransomware demand? Who has authority to approve emergency spending? If these questions don't have answers before the disaster, they'll create chaos during it.</p>
+
+      <h3>7. Communication Plan</h3>
+      <p>If your email is down, how do you communicate internally? How do you notify customers? Do you have everyone's cell phone numbers written down somewhere offline? A communication plan sounds basic, but it's the piece that most small business DR plans skip &mdash; and the absence of it makes everything slower when it matters most.</p>
+
+      <h3>8. Vendor Contacts</h3>
+      <p>Your IT provider's emergency number. Your internet provider. Your cloud vendor's support line. Your server hardware vendor's warranty/support contact. All of this should be in one place, in the DR plan, accessible even when your systems are down.</p>
+    </div>
+  </section>
+
+  <!-- Testing -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Part Everyone Skips</div>
+      <h2>A Plan You Haven't Tested Is Just a Hope</h2>
+
+      <p>We've seen it too many times. A business builds a DR plan, files it away, and never thinks about it again. Then a real disaster hits, they pull out the plan, and discover that the backup software changed, the restore process doesn't work the way it's documented, and the contact list has three phone numbers for people who no longer work there.</p>
+
+      <p>A DR plan is only as good as the last time it was tested. Here's the minimum testing cadence we recommend for small businesses:</p>
+
+      <ul>
+        <li><strong>Monthly:</strong> Verify that backups are completing successfully and that backup alerts are being monitored. This takes about 10 minutes and should be someone's explicit responsibility.</li>
+        <li><strong>Quarterly:</strong> Perform a test restore. Pick something specific &mdash; a folder, a database, a virtual machine &mdash; and actually restore it from backup. Confirm the data is intact and the process works as documented. Fix anything that doesn't match the plan.</li>
+        <li><strong>Annually:</strong> Do a tabletop exercise. Gather the relevant people &mdash; owner, operations lead, IT provider &mdash; and walk through a realistic scenario. "It's 8am Monday. We've discovered ransomware on the network. What happens next?" Walk through the entire plan step by step. This surfaces gaps, outdated contacts, and unclear procedures while the stakes are low.</li>
+      </ul>
+
+      <p>The quarterly restore test is the one most businesses skip. But it's the only way to know if your backups actually work. We've written more about why in our post on <a href="/blog-backup-testing.html" style="color:var(--primary);">backup testing</a> &mdash; if you're not testing restores, you may not have a real backup at all.</p>
+    </div>
+  </section>
+
+  <!-- Where to start -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Getting Started</div>
+      <h2>You Don't Have to Do This All at Once</h2>
+
+      <p>If this feels overwhelming, start with the most impactful pieces and build from there. Here's a practical sequence for a small business starting from scratch:</p>
+
+      <p><strong>Week 1: Know your RTO and RPO.</strong> Have a 30-minute conversation with your team and your IT provider. How long can we be down? How much data can we afford to lose? Write the answers down. That alone will clarify a lot about what you need.</p>
+
+      <p><strong>Week 2: Audit your backups.</strong> Find out exactly what's being backed up, how often, and where. Confirm that backups are going offsite or to the cloud &mdash; not just to a drive sitting next to the server. If there are gaps between your RPO and your actual backup frequency, that's your first fix.</p>
+
+      <p><strong>Week 3: Write down the critical steps.</strong> For your single most important system, write down what you'd do if it failed tomorrow. Who calls who? What's the restore process? Where are the credentials? Get it on paper, even if it's rough. A rough plan is infinitely better than no plan.</p>
+
+      <p><strong>Month 2: Expand and formalize.</strong> Apply the same thinking to your other critical systems. Add a communication plan. Add your vendor contacts. Get it into a document that more than one person has access to.</p>
+
+      <p><strong>Ongoing: Test it.</strong> Schedule the quarterly restore. Put the annual tabletop on the calendar. Review the plan whenever something significant changes &mdash; new software, new staff, new hardware.</p>
+
+      <p>If you want outside help pulling this together, that's exactly the kind of work we do. We'll inventory your systems, identify your gaps, document the procedures, and help you test it. Check out our <a href="/services.html">services page</a> for more on what that engagement looks like, or just reach out and we'll talk through your situation.</p>
+    </div>
+  </section>
+
+  <!-- Bottom line -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Bottom Line</div>
+      <h2>The Question Isn't If. It's When — And How Ready You'll Be.</h2>
+
+      <p>Something will go wrong with your IT eventually. That's not pessimism &mdash; it's just reality. Hardware fails. Ransomware hits. People make mistakes. The question isn't whether you'll face a disruption; it's how long it will take to recover when you do.</p>
+
+      <p>The businesses that recover in hours instead of days aren't lucky. They did the work ahead of time. They know their RTO. Their backups are tested. Someone knows the procedure. There's a communication plan. When the disaster hits, they have something to execute against instead of starting from scratch under pressure.</p>
+
+      <p>Your backup is a good start. But if it's all you have, you have an ingredient &mdash; not a recipe. Build the recipe before you need it.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Let's Build Your Disaster Recovery Plan</h2>
+      <p>We'll help you assess your current backup situation, define your RTO and RPO, and put together a tested DR plan that fits your business &mdash; without the enterprise price tag.</p>
+      <a href="/#contact" class="cta-btn">Get a Free DR Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>

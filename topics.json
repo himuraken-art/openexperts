@@ -90,7 +90,7 @@
       "title": "Does Your Business Have a Disaster Recovery Plan? (No, a Backup Isn't Enough)",
       "keywords": "disaster recovery plan small business, business continuity, DR planning",
       "angle": "Backups are one piece. What about RTO/RPO? Who does what? Communication plan? Walk through building a real DR plan.",
-      "used": false
+      "used": true
     },
     {
       "slug": "vendor-lock-in",
