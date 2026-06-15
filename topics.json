@@ -83,7 +83,7 @@
       "title": "We Phished Our Own Clients. Here's What We Learned.",
       "keywords": "phishing test, phishing simulation, employee security training, social engineering",
       "angle": "Results from real phishing simulations. What people click, why, and how training dramatically reduces the risk.",
-      "used": false
+      "used": true
     },
     {
       "slug": "disaster-recovery-plan",
