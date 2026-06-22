@@ -97,7 +97,7 @@
       "title": "How Vendor Lock-In Is Quietly Costing Your Business Thousands",
       "keywords": "vendor lock-in, IT vendor lock-in, proprietary software costs",
       "angle": "When your IT provider or software vendor owns your data, passwords, or infrastructure. How to recognize it and break free.",
-      "used": false
+      "used": true
     },
     {
       "slug": "remote-work-security",
