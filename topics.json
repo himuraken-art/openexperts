@@ -111,7 +111,7 @@
       "title": "The 5 Most Expensive IT Mistakes Small Businesses Make",
       "keywords": "IT mistakes small business, common IT problems, small business technology mistakes",
       "angle": "No backups tested, no security budget, buying consumer gear, no documentation, reactive-only IT. Real costs of each.",
-      "used": false
+      "used": true
     },
     {
       "slug": "mfa-explained",
