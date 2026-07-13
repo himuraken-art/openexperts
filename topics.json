@@ -118,7 +118,7 @@
       "title": "Multi-Factor Authentication: The Single Best Thing You Can Do for Security Today",
       "keywords": "MFA for business, two factor authentication, multi-factor authentication small business",
       "angle": "What MFA is in plain English, why it stops 99% of account compromises, how to roll it out without driving your team crazy. Cover M365 MFA specifically.",
-      "used": false
+      "used": true
     },
     {
       "slug": "server-closet-horror",
