@@ -125,7 +125,7 @@
       "title": "What's Hiding in Your Server Closet? (A Field Guide to IT Neglect)",
       "keywords": "server room maintenance, small business server, IT infrastructure neglect",
       "angle": "Funny but real tour of common server closet nightmares — daisy-chained power strips, consumer switches, no UPS, dust-choked vents. What each one risks and how to fix it.",
-      "used": false
+      "used": true
     },
     {
       "slug": "sharepoint-vs-file-server",
