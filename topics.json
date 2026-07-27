@@ -132,7 +132,7 @@
       "title": "SharePoint vs a File Server: Which One Does Your Business Actually Need?",
       "keywords": "SharePoint vs file server, OneDrive for business, small business file sharing",
       "angle": "Honest comparison. SharePoint/OneDrive is great for some things, terrible for others. File servers aren't dead. Help them choose based on how their team actually works.",
-      "used": false
+      "used": true
     },
     {
       "slug": "ups-power-protection",
