@@ -139,7 +139,7 @@
       "title": "A $200 UPS Could Save Your Business $50,000. Here's Why.",
       "keywords": "UPS for business, uninterruptible power supply, power protection server, surge protection business",
       "angle": "What happens when power blips — corrupted databases, dead drives, lost work. What a UPS does, how to size one, and why every business with a server needs one.",
-      "used": false
+      "used": true
     },
     {
       "slug": "security-cameras-network",
