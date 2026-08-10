@@ -146,7 +146,7 @@
       "title": "Your Security Cameras Are on the Same Network as Your Business Data. That's a Problem.",
       "keywords": "security camera network segmentation, IoT security business, network security cameras",
       "angle": "IoT devices like cameras are notoriously insecure. If they're on the same network as your files and POS, they're a backdoor. Explain VLANs and segmentation in simple terms.",
-      "used": false
+      "used": true
     },
     {
       "slug": "email-compromise-bec",

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Security Cameras Are on the Same Network as Your Business Data. That's a Problem. | Open Experts</title>
+  <meta name="description" content="IoT devices like security cameras are notoriously insecure. If they share a network with your files and POS system, they're a backdoor. Here's how to fix it with VLANs and network segmentation.">
+  <meta name="keywords" content="security camera network segmentation, IoT security business, network security cameras, VLAN small business, IoT devices business network, network isolation cameras">
+  <link rel="canonical" href="https://openexperts.tech/blog-security-cameras-network.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Your Security Cameras Are on the Same Network as Your Business Data. That's a Problem.">
+  <meta property="og:description" content="IoT devices like security cameras are notoriously insecure. If they share a network with your files and POS system, they're a backdoor. Here's how to fix it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-security-cameras-network.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Your Security Cameras Are on the Same Network as Your Business Data. That's a Problem.",
+    "description": "IoT devices like security cameras are notoriously insecure. If they share a network with your files and POS system, they're a backdoor. Here's how to fix it with VLANs and network segmentation.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-08-10",
+    "mainEntityOfPage": "https://openexperts.tech/blog-security-cameras-network.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Your Security Cameras Are on the Same Network<br><em>as Your Business Data. That's a Problem.</em></h1>
+    <p>IoT devices like security cameras are some of the most insecure things on the internet. If they share a network with your files, your point-of-sale system, or your accounting software, they're a backdoor an attacker can walk right through.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>A few years ago a retail client called us after a breach. Someone had gotten into their internal network, poked around their point-of-sale system, and made off with several months of transaction data. The investigation eventually traced the entry point not to a phishing email, not to a weak password &mdash; but to a security camera.</p>
+
+      <p>Specifically, a $89 IP camera they'd installed in the parking lot two years earlier. The default admin password had never been changed. The camera's firmware hadn't been updated since the day it was installed. And it sat on the same network as everything else in the building.</p>
+
+      <p>Once an attacker got into that camera &mdash; trivially easy to do &mdash; they had a foothold on the same network segment as the POS terminals, the server, and the shared file drive. From there, it was just a matter of patience.</p>
+
+      <p>This isn't a rare story. It's the kind of thing we see again and again, because most small businesses install security cameras, thermostats, smart TVs, and other "internet of things" devices without thinking about the security implications. The cameras go in, they work, and that's the end of the conversation. The network conversation never happens.</p>
+
+      <p>We want to change that. This isn't complicated to fix &mdash; but you do have to know it's a problem first.</p>
+    </div>
+  </section>
+
+  <!-- Why IoT devices are so insecure -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Core Problem</div>
+      <h2>Why Security Cameras (and IoT Devices in General) Are Such a Security Risk</h2>
+
+      <p>Security cameras, smart thermostats, badge readers, wireless access points, digital signage players &mdash; these all fall under the umbrella of IoT devices: things that connect to your network and run some kind of software, but aren't traditional computers with a human watching over them.</p>
+
+      <p>The security problems with IoT devices are almost universal:</p>
+
+      <h3>Default credentials that never get changed</h3>
+      <p>Most IP cameras ship with default usernames and passwords &mdash; "admin/admin" or "admin/12345" are genuinely common. There are public databases online that list the default credentials for thousands of device models. Attackers scan the internet for these devices and try the known defaults. If no one changed the password during setup (and in our experience, most businesses never do), the camera is compromised before it's even been through a full day of recording.</p>
+
+      <h3>Firmware that never gets updated</h3>
+      <p>Your Windows server gets security patches. Your firewall gets firmware updates. Your cameras? Probably not. Most small businesses install a camera system, confirm it works, and never think about it again. The cameras just sit there, running the same firmware from the day they shipped, accumulating vulnerabilities as researchers and attackers find them. Some camera manufacturers have a poor track record of even releasing security patches at all.</p>
+
+      <h3>They're designed for convenience, not security</h3>
+      <p>Consumer-grade and small-business-grade IoT devices are built to be easy to set up and cheap to manufacture. Security is frequently an afterthought. Some communicate with manufacturer cloud services in ways that are hard to audit. Some have hardcoded backdoor credentials that the manufacturer uses for support access. Some have been found to exfiltrate data to servers in countries you'd prefer your business data not visit.</p>
+
+      <h3>No one's watching them</h3>
+      <p>With a computer, if something starts behaving strangely, someone notices. With a camera, the only evidence anyone sees is the video feed &mdash; and if the camera is still showing footage, people assume it's fine. An attacker can be living inside a camera for months, using it as a persistent foothold into your network, and you'd have no idea.</p>
+    </div>
+  </section>
+
+  <!-- What attackers can do with that access -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Real Risk</div>
+      <h2>What an Attacker Can Actually Do Once They're on Your Network</h2>
+
+      <p>Here's the thing about a network: if a device is on it, that device can talk to other devices on it. That's kind of the point. But it also means a compromised camera can talk to your file server, your accounting software, your point-of-sale terminals &mdash; anything else on the same network segment.</p>
+
+      <h3>Reconnaissance</h3>
+      <p>An attacker who gets into a device on your network will typically start by scanning to see what else is there. Your file server, your database server, any Windows machines, other network devices &mdash; all of this becomes visible. They're not necessarily going to move immediately. They may sit quietly for weeks, watching traffic, mapping your environment, looking for the most valuable target.</p>
+
+      <h3>Lateral movement</h3>
+      <p>Once they've mapped the network, attackers move from the compromised device toward higher-value targets. If they can get to a Windows machine, they might try to escalate privileges. If they can reach a file server, they might start quietly exfiltrating data. If they can reach a POS system, they're looking at cardholder data. This is exactly how the retail breach we mentioned started &mdash; one cheap camera was the entry point; the POS data was the destination.</p>
+
+      <h3>Ransomware staging</h3>
+      <p>Increasingly, attackers use initial footholds like compromised IoT devices to stage ransomware attacks. They get in, move laterally to find your backups and your main servers, disable or encrypt the backups first, then deploy ransomware across everything at once. The camera was just the door. For a deeper look at what a modern attack looks like, our <a href="/cybersecurity-guide.html" style="color:var(--primary);">Cybersecurity Essentials guide</a> covers the full threat landscape.</p>
+
+      <h3>Persistent access</h3>
+      <p>A compromised IoT device that nobody's watching is a gift that keeps giving. Even if you respond to an incident and clean up your servers, if the camera that was the original entry point is still running compromised firmware, the attacker may simply re-enter through the same door. IoT devices are often overlooked during incident response for exactly this reason.</p>
+    </div>
+  </section>
+
+  <!-- The solution: VLANs and segmentation -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Fix</div>
+      <h2>Network Segmentation: Keeping Your Cameras in Their Own Lane</h2>
+
+      <p>The solution to this problem is called network segmentation &mdash; specifically, putting your IoT devices on a separate network segment that can't directly communicate with the rest of your business systems. The most common way to do this is with VLANs.</p>
+
+      <h3>What's a VLAN?</h3>
+      <p>VLAN stands for Virtual Local Area Network. It's a way of dividing a single physical network into multiple logically separate networks. Think of it like having separate lanes on a highway &mdash; traffic in one lane doesn't automatically cross into another. Devices on one VLAN can't directly reach devices on another VLAN unless traffic is explicitly permitted through a firewall or router that controls what can cross between them.</p>
+
+      <p>A VLAN isn't a separate physical network &mdash; you don't need to run separate cables for each segment (though you can). It's configured in software on a managed switch and enforced at the network layer. The cameras, thermostats, and badge readers go on the IoT VLAN. Your servers, workstations, and POS systems go on the business VLAN. The two can talk to the internet (with appropriate firewall rules), but they can't talk to each other.</p>
+
+      <h3>What segmentation actually does</h3>
+      <p>When a camera gets compromised &mdash; and we're assuming "when," not "if" &mdash; the attacker is stuck on the IoT VLAN. They can see other cameras, maybe other IoT devices, but they can't reach your file server, your domain controller, your POS terminals, or your workstations. The blast radius of a compromised camera is contained. The camera becomes a problem to fix, not a catastrophe.</p>
+
+      <p>This is the same principle that makes a <a href="/blog-consumer-router-firewall.html" style="color:var(--primary);">proper business firewall</a> worth having &mdash; layered defenses that contain damage rather than assuming nothing will go wrong.</p>
+
+      <h3>What you need to make this work</h3>
+      <p>To implement VLANs, you need:</p>
+      <ul>
+        <li><strong>A managed switch</strong> &mdash; not the unmanaged $40 switch from the office supply store. Managed switches support VLANs; unmanaged ones don't. Business-grade managed switches start around $100-$200 for an 8-port unit.</li>
+        <li><strong>A firewall/router that understands VLANs</strong> &mdash; your ISP's consumer gateway almost certainly doesn't. A pfSense box, Ubiquiti UniFi, or similar business-grade solution does. If you're still running a consumer router as your firewall, VLANs are one more reason to upgrade.</li>
+        <li><strong>Access points that support VLAN tagging</strong> &mdash; if your cameras or IoT devices connect over Wi-Fi, your access points need to be able to tag those clients into the correct VLAN. Business-grade access points from Ubiquiti, Aruba, or similar handle this; consumer access points typically don't.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Guest network vs VLAN -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">A Common Question</div>
+      <h2>Wait &mdash; Can't I Just Use a Guest Wi-Fi Network?</h2>
+
+      <p>We hear this one a lot. Your router probably already has a "guest network" option. Can't you just put the cameras on that?</p>
+
+      <p>For wireless IoT devices, a guest network can be a reasonable starting point &mdash; it's much better than nothing. A properly configured guest network isolates clients from each other and from the main network. If your cameras support Wi-Fi and your guest network is correctly set up, you've taken a meaningful step.</p>
+
+      <p>But there are important caveats:</p>
+
+      <p><strong>Many cameras are wired, not wireless.</strong> If your IP cameras are connected via Ethernet (which is common for reliability reasons), a Wi-Fi guest network doesn't help at all. You need VLAN support in your switches to segment wired devices.</p>
+
+      <p><strong>Consumer "guest networks" aren't always as isolated as they should be.</strong> The implementation varies a lot by router/access point. Some genuinely block guest clients from reaching the main network; others have bugs or misconfigurations that allow cross-network traffic. Don't assume isolation without verifying it.</p>
+
+      <p><strong>You lose visibility and control.</strong> A guest network gives you basic isolation, but a proper VLAN setup lets you define precise firewall rules: the cameras can reach the internet (for cloud storage or remote viewing), but they can't reach anything on your LAN. You can log traffic crossing the boundary, set rate limits, and monitor for unusual behavior. A guest network gives you "sort of isolated"; VLANs give you "specifically controlled."</p>
+
+      <p>Think of a guest network as a band-aid and VLANs as the actual fix. If you're currently running cameras on your main network, moving them to a guest Wi-Fi network today while you plan a proper VLAN setup is a reasonable interim step. Just don't stop there.</p>
+    </div>
+  </section>
+
+  <!-- Other IoT security practices -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Beyond Segmentation</div>
+      <h2>Other Things You Should Be Doing With IoT Devices</h2>
+
+      <p>Network segmentation is the most important fix, but it's not the only one. A camera that's been segmented but still has the default password and three-year-old firmware is still a compromised camera &mdash; it's just one that can't escape into the rest of your network. Here's what else matters:</p>
+
+      <h3>Change default credentials immediately</h3>
+      <p>Every IP camera, NAS, managed switch, access point, and network-connected device should have the default password changed before it goes live. Use strong, unique passwords &mdash; and store them in a <a href="/blog-password-managers.html" style="color:var(--primary);">business password manager</a> so they're not lost when staff turns over. This is the single most basic step and is still skipped constantly.</p>
+
+      <h3>Keep firmware updated</h3>
+      <p>Set a reminder to check for firmware updates on your cameras and other IoT devices at least quarterly. For most devices this means logging into the management interface and checking for updates, or signing up for the manufacturer's security bulletin. It's not glamorous, but it closes the vulnerabilities attackers exploit.</p>
+
+      <h3>Disable features you don't use</h3>
+      <p>Many IP cameras come with remote cloud access, UPnP (a protocol that can automatically punch holes in your firewall), Telnet, and other services enabled by default. Turn off anything you don't actively use. UPnP in particular should almost always be disabled &mdash; it's a convenience feature that creates security problems by automatically forwarding ports on your firewall without your knowledge.</p>
+
+      <h3>Know what IoT devices you have</h3>
+      <p>Do you know every device connected to your network? Cameras, yes &mdash; but what about the smart TV in the conference room, the Wi-Fi thermostat, the network-connected copier, the VoIP phone adapters? Any of these can be entry points if they're misconfigured or running old firmware. An honest <a href="/services.html" style="color:var(--primary);">network assessment</a> often turns up devices people forgot were there.</p>
+
+      <h3>Consider camera systems designed with security in mind</h3>
+      <p>Not all camera systems are equally problematic. Enterprise-grade NVR (network video recorder) systems from vendors like Axis, Hanwha, or Verkada are designed with security practices in mind &mdash; automatic firmware updates, better default configurations, audit logs, proper access controls. They cost more than the $89 camera from an online marketplace. But the $89 camera's true cost includes the risk you're accepting.</p>
+    </div>
+  </section>
+
+  <!-- Practical starting point -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Where to Start</div>
+      <h2>What to Do This Week</h2>
+
+      <p>If you've read this far and you're not sure what your camera setup looks like, here are three things you can do right now &mdash; before you even call anyone:</p>
+
+      <p><strong>1. Find out what's on your network.</strong> Log into your router or firewall and look at the list of connected devices. Identify anything that isn't a computer, phone, or known piece of office equipment. Those are your IoT devices. For most businesses, the list is longer than expected. A smart TV you forgot about. A camera installed by a previous employee. A badge reader no one thought about since it was installed three years ago.</p>
+
+      <p><strong>2. Check the passwords.</strong> For every camera and IoT device you identify, look up the default credentials for that model (just Google "brand model default password"). Then log into the device and check whether those credentials still work. If they do, change them today. This takes twenty minutes and is genuinely one of the highest-value security tasks you can do.</p>
+
+      <p><strong>3. Find out whether your cameras are on a separate network.</strong> Ask your IT person or IT provider whether your IoT devices are segmented from your main business network. The answer should be a clear "yes, they're on a VLAN" or at minimum "yes, they're on a separate guest network." If the answer is "I'm not sure" or "they're on the same network as everything else," you've identified a real problem worth fixing.</p>
+
+      <p>The good news is this is genuinely fixable, and it doesn't require replacing your cameras or starting over from scratch. It's a network configuration change &mdash; one that a competent IT provider can typically implement in a few hours with the right equipment. If your current infrastructure doesn't support VLANs (consumer switches, consumer router), that's a slightly bigger project, but one that usually makes sense as part of a broader network upgrade. We cover what that looks like in our <a href="/cybersecurity-guide.html" style="color:var(--primary);">cybersecurity guide</a>.</p>
+
+      <p>Your security cameras are supposed to make your business safer. With the right network setup, they will. Without it, they might be doing the opposite.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Not Sure How Your Network Is Set Up?</h2>
+      <p>We can take a look at your current setup and tell you honestly whether your cameras and IoT devices are properly isolated from your business data &mdash; no obligation. If everything's fine, we'll tell you that. If it's not, we'll tell you exactly what to do about it.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Network Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>
