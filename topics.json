@@ -153,7 +153,7 @@
       "title": "Business Email Compromise: The $2.7 Billion Scam You've Never Heard Of",
       "keywords": "business email compromise, BEC scam, CEO fraud, email fraud small business",
       "angle": "Not phishing — targeted impersonation where attackers pretend to be the CEO or a vendor and trick employees into wiring money. Real examples, how to spot it, how to prevent it.",
-      "used": false
+      "used": true
     },
     {
       "slug": "documentation-matters",
