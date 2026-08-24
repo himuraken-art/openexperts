@@ -160,7 +160,7 @@
       "title": "If Your IT Person Got Hit by a Bus Tomorrow, Could You Recover?",
       "keywords": "IT documentation, business continuity, IT knowledge transfer, bus factor",
       "angle": "The bus factor problem. If everything lives in one person's head, you're one resignation away from chaos. What should be documented, how, and where.",
-      "used": false
+      "used": true
     },
     {
       "slug": "windows-10-end-of-life",
