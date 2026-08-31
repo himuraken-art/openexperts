@@ -167,7 +167,7 @@
       "title": "Windows 10 End of Life: What Your Business Needs to Do Before the Deadline",
       "keywords": "Windows 10 end of life, Windows 10 EOL business, upgrade to Windows 11, Windows 10 support ending",
       "angle": "October 2025 deadline passed but many businesses are still running it. Security risks of unpatched systems. Options: upgrade, replace hardware, or extended security updates (paid). Practical guidance.",
-      "used": false
+      "used": true
     },
     {
       "slug": "managed-vs-break-fix",
