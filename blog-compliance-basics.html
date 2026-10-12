@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Compliance for Small Business: What You're Required to Do (But Probably Don't Know) | Open Experts</title>
+  <meta name="description" content="PCI, HIPAA, state privacy laws — many small businesses have compliance obligations they don't know about. Here's a plain-English guide to figuring out what applies to you and what to do about it.">
+  <meta name="keywords" content="small business data compliance, HIPAA small business, PCI compliance small business, data protection regulations, state privacy laws business, CCPA small business, data compliance requirements">
+  <link rel="canonical" href="https://openexperts.tech/blog-compliance-basics.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="Data Compliance for Small Business: What You're Required to Do (But Probably Don't Know)">
+  <meta property="og:description" content="PCI, HIPAA, state privacy laws — many small businesses have compliance obligations they don't know about. Here's how to figure out what applies to you.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-compliance-basics.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Data Compliance for Small Business: What You're Required to Do (But Probably Don't Know)",
+    "description": "PCI, HIPAA, state privacy laws — many small businesses have compliance obligations they don't know about. Here's a plain-English guide to figuring out what applies to you and what to do about it.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-10-12",
+    "mainEntityOfPage": "https://openexperts.tech/blog-compliance-basics.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>Data Compliance for Small Business:<br><em>What You're Required to Do (But Probably Don't Know)</em></h1>
+    <p>PCI, HIPAA, state privacy laws — compliance obligations don't disappear just because you're small. Here's how to figure out which ones apply to you.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>When business owners hear the word "compliance," they tend to think of big corporations with legal departments and dedicated compliance officers. Certainly not their 12-person dental practice or the small retail store that's been in the family for thirty years.</p>
+
+      <p>But here's the uncomfortable truth: compliance obligations don't scale by company size. If you process credit cards, you have PCI requirements. If you handle patient health information, HIPAA applies to you whether you have two employees or two thousand. If your customers live in California, you may already have CCPA obligations. The regulations don't care how many people work for you.</p>
+
+      <p>The even more uncomfortable truth is that most small business owners don't know this. We see it constantly &mdash; businesses that have been unknowingly out of compliance for years, exposed to fines and liability that nobody warned them about. This isn't a scare tactic. It's just the reality of how these regulations work, and it's fixable once you know what applies to you.</p>
+
+      <p>Let's walk through the major frameworks, figure out which ones you might actually fall under, and talk about what "compliance" practically means for a small business. This isn't legal advice &mdash; for that you need an attorney &mdash; but it should give you a much clearer picture of where to focus your attention.</p>
+    </div>
+  </section>
+
+  <!-- PCI -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">If You Take Credit Cards</div>
+      <h2>PCI DSS: The One Almost Every Business Has</h2>
+
+      <p>The Payment Card Industry Data Security Standard (PCI DSS) applies to any business that accepts, processes, stores, or transmits credit card data. That's a very broad net &mdash; and it probably catches you.</p>
+
+      <p>This isn't a law, technically. It's a set of requirements maintained by the major card brands (Visa, Mastercard, etc.), and compliance is required by your merchant services agreement. Violating it can result in fines from your payment processor, higher transaction fees, or &mdash; in the worst case &mdash; losing the ability to accept cards altogether. After a breach, non-compliance can also expose you to liability for fraudulent charges.</p>
+
+      <p>The good news: PCI compliance for small businesses is usually a "self-assessment questionnaire" process, not a full audit. The questionnaire that applies to you depends on how you accept cards:</p>
+
+      <ul>
+        <li><strong>You use a fully hosted payment page or third-party terminal and never touch card data yourself?</strong> You fall under SAQ A or SAQ B &mdash; the simplest categories. Most of the requirements are already handled by your processor.</li>
+        <li><strong>You use a physical payment terminal that's directly connected to your network?</strong> SAQ B-IP or SAQ C. A bit more involved, but still manageable.</li>
+        <li><strong>You have a custom checkout or process cards on your own server?</strong> SAQ D &mdash; the most demanding version. If you're here, you likely already have some professional help.</li>
+      </ul>
+
+      <p>The most common small business failure: running a payment terminal on the same network as everything else, with no segmentation. We've written about network segmentation elsewhere &mdash; it matters for security cameras and IoT devices too &mdash; but for PCI it's specifically required. Your payment network should be isolated from your general business network. If it isn't, that's a compliance gap and a security risk at the same time.</p>
+
+      <p>Your merchant services provider or payment processor should have PCI resources available. If they haven't walked you through the self-assessment questionnaire, ask them about it.</p>
+    </div>
+  </section>
+
+  <!-- HIPAA -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">If You Touch Health Information</div>
+      <h2>HIPAA: Not Just for Hospitals</h2>
+
+      <p>HIPAA &mdash; the Health Insurance Portability and Accountability Act &mdash; applies to what it calls "covered entities" and their "business associates." Covered entities are healthcare providers (doctors, dentists, therapists, chiropractors, optometrists), health plans, and healthcare clearinghouses. Business associates are vendors who handle protected health information (PHI) on behalf of a covered entity &mdash; think billing services, IT providers who have access to medical records systems, or cloud storage vendors a practice uses to store patient files.</p>
+
+      <p>HIPAA violations aren't just theoretical. The Department of Health and Human Services has fined medical practices with fewer than ten employees. A solo therapy practice in California was fined $25,000. A small dental practice was fined for emailing unencrypted patient records. The penalties scale by severity and willfulness, but they start at $100 per violation and can reach $50,000 per violation for willful neglect.</p>
+
+      <p>What does HIPAA compliance require practically? The key pieces are:</p>
+
+      <ul>
+        <li><strong>A Security Risk Assessment.</strong> You're required to formally assess the risks to your electronic PHI. This doesn't have to be a massive document, but it does have to be done, and done regularly.</li>
+        <li><strong>Written policies and procedures.</strong> How do you handle patient data? Who has access? What happens when a breach occurs? This needs to be documented.</li>
+        <li><strong>Technical safeguards.</strong> Encryption of data in transit and at rest, access controls, audit logging, automatic logoff on workstations. Many of these are just good security practices regardless of HIPAA.</li>
+        <li><strong>Business Associate Agreements (BAAs).</strong> Any vendor who handles PHI on your behalf &mdash; including your IT provider &mdash; must sign a BAA. If you don't have BAAs in place, that's a gap.</li>
+        <li><strong>Breach notification.</strong> If you have a breach affecting patient data, you have specific notification obligations: to the affected individuals, to HHS, and in some cases to local media. Timing matters.</li>
+      </ul>
+
+      <p>If you're in healthcare and your IT isn't specifically HIPAA-aware, that's a problem worth addressing. Generic IT support doesn't cut it when your systems contain PHI. Your <a href="/it-buyers-guide.html" style="color:var(--primary);">IT provider needs to understand healthcare compliance</a>, not just fix computers.</p>
+    </div>
+  </section>
+
+  <!-- State Privacy Laws -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Patchwork Nobody Talks About</div>
+      <h2>State Privacy Laws: The Compliance Landscape Nobody Warned You About</h2>
+
+      <p>This is the area where most small business owners are most surprised. There is no single federal data privacy law in the United States &mdash; instead, there's a growing patchwork of state laws, each with its own requirements and thresholds.</p>
+
+      <p>The most well-known is the California Consumer Privacy Act (CCPA), now strengthened by CPRA. It applies to for-profit businesses that meet certain thresholds: annual gross revenues over $25 million, OR buying/selling personal data of 100,000+ consumers annually, OR deriving 50% or more of annual revenue from selling consumer data. Most small businesses won't hit those thresholds &mdash; but if you operate in California or serve California customers, it's worth confirming you don't.</p>
+
+      <p>More practically relevant for many small businesses are breach notification laws. Every state now has one. If your business suffers a data breach and customer personal information is compromised, you are almost certainly required by law to notify those customers. The specifics vary by state &mdash; what counts as a breach, how quickly you must notify, what the notification must include &mdash; but the obligation is nearly universal.</p>
+
+      <p>Other state laws that may apply depending on your industry and location:</p>
+
+      <ul>
+        <li><strong>Financial industry:</strong> If you're a financial services business, you likely have obligations under the Gramm-Leach-Bliley Act (GLBA) and possibly state-level financial privacy regulations.</li>
+        <li><strong>Education:</strong> Schools and businesses that work with student data have obligations under FERPA.</li>
+        <li><strong>Children:</strong> If your business has any digital presence that might attract users under 13, COPPA applies.</li>
+        <li><strong>State-specific:</strong> Virginia, Colorado, Connecticut, Texas, and a growing list of other states have passed their own comprehensive privacy laws. If you have customers across the country, the state law of where they reside may apply to how you handle their data.</li>
+      </ul>
+
+      <p>This sounds complicated, and it is &mdash; which is exactly why most small businesses don't address it. But "I didn't know" has never been a successful defense in a data breach lawsuit, and it won't be with regulators either.</p>
+    </div>
+  </section>
+
+  <!-- What to Actually Do -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Making It Practical</div>
+      <h2>What Compliance Actually Looks Like for a Small Business</h2>
+
+      <p>Here's the thing about compliance: a lot of it overlaps with just running a secure business. Encrypt your sensitive data. Control who has access to what. Have a backup plan. Document your procedures. Know what you'd do if something went wrong. These are good practices regardless of which regulation applies to you.</p>
+
+      <p>We tell our clients to think about compliance not as a checkbox exercise but as a framework for building good habits. If your security posture is solid &mdash; if you have real <a href="/cybersecurity-guide.html" style="color:var(--primary);">layered security in place</a>, documented procedures, and a <a href="/blog-disaster-recovery-plan.html" style="color:var(--primary);">real disaster recovery plan</a> &mdash; you're probably most of the way to compliant in whatever framework applies to you. The compliance documentation is often just capturing and formalizing what you're already doing.</p>
+
+      <p>That said, there are some specific steps worth taking right now:</p>
+
+      <h3>1. Know What Data You Have and Where It Lives</h3>
+
+      <p>You can't protect data you don't know about. Do a basic inventory: what types of sensitive data does your business collect and store? Credit card numbers? Patient records? Social Security numbers? Employee personal information? Where is each type stored &mdash; on a server, in the cloud, in email, in paper files? Who has access to it?</p>
+
+      <p>This isn't a huge project. An afternoon with a spreadsheet is often enough to get a clear picture. But it's foundational to everything else.</p>
+
+      <h3>2. Know What Regulations Apply to You</h3>
+
+      <p>Based on the data you hold, figure out which frameworks are relevant. If you're unsure, talk to your attorney &mdash; this is exactly the kind of question they can help you answer quickly. Many business attorneys can do a 30-minute compliance overview for a modest fee, and it's worth every dollar.</p>
+
+      <h3>3. Know What You'd Do If Something Went Wrong</h3>
+
+      <p>Every compliance framework includes breach notification requirements. If you discovered tomorrow that your systems had been compromised and customer data had been accessed, what would you do? Who would you call? How quickly are you required to notify customers? Your state attorney general? Your payment processor?</p>
+
+      <p>If you don't have answers to those questions, you need a basic incident response plan. It doesn't have to be elaborate &mdash; a one-page checklist covering who does what in the first 24 hours is infinitely better than nothing. Our <a href="/blog-after-data-breach.html" style="color:var(--primary);">post on what to do after a data breach</a> covers the basics if you want a starting point.</p>
+
+      <h3>4. Get Your IT House in Order</h3>
+
+      <p>Most compliance requirements have a technical component: encryption, access controls, audit logging, multi-factor authentication. If your IT infrastructure is held together with duct tape and good intentions, compliance is harder to achieve and maintain. Getting your <a href="/services.html" style="color:var(--primary);">IT fundamentals solid</a> first makes everything else easier.</p>
+
+      <h3>5. Make Someone Responsible</h3>
+
+      <p>Compliance doesn't maintain itself. Someone in your organization needs to own it &mdash; to make sure the security risk assessment gets done each year, that new employees get trained, that vendor agreements include the right language. In a small business, this might be you. That's fine. Just make sure it's someone, with a clear responsibility, and not a task that falls through the cracks because everyone assumed someone else was handling it.</p>
+    </div>
+  </section>
+
+  <!-- What compliance is not -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Clearing Up the Confusion</div>
+      <h2>What Compliance Is Not</h2>
+
+      <p>A few things we want to be clear about, because we hear a lot of misconceptions:</p>
+
+      <p><strong>Compliance is not the same as security.</strong> A business can be technically compliant and still get breached. Compliance is a minimum floor, not a ceiling. The goal is actually being secure, which goes beyond checking boxes. If you've been thinking "we did our PCI questionnaire so we're good," please revisit that assumption.</p>
+
+      <p><strong>Cyber insurance doesn't replace compliance.</strong> Cyber insurance is valuable &mdash; we recommend it for most businesses &mdash; but many policies have requirements. Some won't pay out on a claim if you weren't compliant with applicable regulations or if you didn't have basic security controls in place. Compliance and insurance work together; neither replaces the other. See our post on <a href="/blog-cyber-insurance.html" style="color:var(--primary);">what to know about cyber insurance</a> for more on that.</p>
+
+      <p><strong>Compliance doesn't expire when you complete the paperwork.</strong> It's ongoing. Data environments change, regulations update, new threats emerge. The security risk assessment under HIPAA isn't a one-time thing &mdash; it's supposed to be reviewed and updated regularly. Building compliance into your annual rhythm is the only sustainable approach.</p>
+
+      <p><strong>"We're too small to be a target" is not a compliance strategy.</strong> We've addressed this misconception before. Small businesses are targeted precisely because they often have the same types of data as larger companies but much weaker protections. Regulators don't exempt small businesses either &mdash; the penalties are lower in absolute terms, but they're structured as percentages or per-violation amounts that can still be devastating to a small operation.</p>
+    </div>
+  </section>
+
+  <!-- Wrap up -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Where to Start</div>
+      <h2>You Don't Have to Solve It All at Once</h2>
+
+      <p>We want to close with something that might be counterintuitive: don't let the scope of this paralyze you. Compliance is one of those topics where the perfect becomes the enemy of the good. Many small businesses do nothing because the full picture feels overwhelming. That's the worst outcome.</p>
+
+      <p>Start with the most obvious: do you take credit cards? Get your PCI questionnaire done. Do you handle patient data? Get a BAA with your IT provider and schedule a security risk assessment. Have a data breach? Know who you'd call in the first hour.</p>
+
+      <p>Then build from there. Each step you take reduces your exposure and makes the next step easier. The goal isn't a perfect compliance program on day one &mdash; it's steady, meaningful progress toward running a business that handles customer data with the care it deserves.</p>
+
+      <p>If you're not sure where your gaps are, a practical IT assessment can help you see the technical side of the picture. We look at these things regularly for our clients, and we're happy to have an honest conversation about what you're dealing with. Our <a href="/it-buyers-guide.html" style="color:var(--primary);">IT Buyer's Guide</a> can also help you think through what questions to ask any provider you work with on this.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Not Sure What Compliance Applies to Your Business?</h2>
+      <p>We can walk through your IT environment, identify compliance gaps, and help you build a practical plan to address them &mdash; without the jargon or the unnecessary upsell. Let's start with a free conversation.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Compliance Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>

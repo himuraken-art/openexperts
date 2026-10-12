@@ -209,7 +209,7 @@
       "title": "Data Compliance for Small Business: What You Probably Don't Know You're Required to Do",
       "keywords": "small business data compliance, HIPAA small business, PCI compliance small business, data protection regulations",
       "angle": "Many small businesses have compliance obligations they don't know about (PCI if you take cards, HIPAA if you touch health data, state privacy laws). Quick guide to figuring out what applies to you.",
-      "used": false
+      "used": true
     },
     {
       "slug": "backup-testing",
