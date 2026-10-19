@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>When Was the Last Time You Tested Your Backups? | Open Experts</title>
+  <meta name="description" content="A backup you've never tested isn't a backup — it's a hope. Here's why untested backups fail at the worst moments, and how to build a simple testing routine that gives you real confidence.">
+  <meta name="keywords" content="backup testing, backup restore test, backup verification, are my backups working, small business backup, test your backups">
+  <link rel="canonical" href="https://openexperts.tech/blog-backup-testing.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="When Was the Last Time You Tested Your Backups? (If You Can't Remember, Read This)">
+  <meta property="og:description" content="A backup you've never tested isn't a backup — it's a hope. Here's why untested backups fail and how to build a simple testing routine.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-backup-testing.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "When Was the Last Time You Tested Your Backups? (If You Can't Remember, Read This)",
+    "description": "A backup you've never tested isn't a backup — it's a hope. Here's why untested backups fail at the worst moments, and how to build a simple testing routine that gives you real confidence.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-10-19",
+    "mainEntityOfPage": "https://openexperts.tech/blog-backup-testing.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>When Was the Last Time You Tested Your Backups?<br><em>(If You Can't Remember, Read This)</em></h1>
+    <p>A backup you've never tested isn't a backup &mdash; it's a guess. Here's how to find out if yours will actually work before you need them.</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>I've had more uncomfortable conversations about backups than I can count. They usually start the same way: a business owner calls in a panic because something went wrong &mdash; ransomware hit, a server died, someone accidentally deleted three years of accounting records &mdash; and they need us to restore from backup. Fast.</p>
+
+      <p>And then I ask the question that makes everyone go quiet: "When was the last time you actually tested a restore?"</p>
+
+      <p>The answer, more often than not, is "never." Or "I think we tested it when we first set it up." Or "I assumed my IT person was doing that."</p>
+
+      <p>Here's the hard truth: <strong>a backup that has never been tested is Schr&ouml;dinger's backup.</strong> It might work perfectly. It might be completely useless. You won't know until the moment you need it most &mdash; and that is a terrible time to find out.</p>
+
+      <p>After 30+ years of doing this, I've seen backup failures that could have been caught with a 20-minute monthly test. I've seen businesses lose months of data because error emails were piling up in a mailbox nobody checked. And I've seen the relief on people's faces when a tested, verified backup saved their business from what should have been a catastrophe.</p>
+
+      <p>Testing backups is boring. It feels like checking a fire extinguisher every month when there's never been a fire. But it's one of the most important things you can do for your business. Let me show you why &mdash; and how to build a routine that actually works.</p>
+    </div>
+  </section>
+
+  <!-- Why Backups Fail -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>Why Backups Fail Silently</h2>
+
+      <p>Backup failures are sneaky. Your backup software doesn't call you to say it stopped working three months ago. It sends an email &mdash; to an inbox nobody monitors. Or it logs an error that nobody checks. Or it just quietly fails every night while the green light on the dashboard says everything is fine.</p>
+
+      <p>Here are the failure modes we see most often:</p>
+
+      <h3>The Software Silently Stopped Running</h3>
+      <p>Windows Update reboots the server at 2 AM. The backup job that was running at that moment terminates. The scheduled task fails to restart properly. Weeks pass. Nobody notices because there are no alerts set up, or the alerts are going to an old email address, or the alerts are there but they got buried under newsletters and nobody reads them anymore.</p>
+
+      <h3>The Backup Drive Is Full</h3>
+      <p>Backup storage fills up, especially if retention policies weren't set correctly. When the drive is full, the backup job fails. This one is surprisingly common &mdash; and it usually goes unnoticed until something else fails first.</p>
+
+      <h3>The Files Are There, But They're Corrupted</h3>
+      <p>This is the most dangerous one, because everything looks fine right up until you try to restore. The backup completed. The files are on the drive. But when you try to open them, they're corrupted &mdash; incomplete, encrypted partway through, or just garbage data. This can happen when backups run while files are actively open, when storage hardware is quietly failing, or when backup software has a bug that nobody caught.</p>
+
+      <h3>The Wrong Things Are Being Backed Up</h3>
+      <p>You backed up the server, but the QuickBooks company file lives on a workstation in the accounting office. Or the new cloud application everyone switched to last year stores its data in a location that isn't included in the backup job. You'd never know until the moment you needed to restore something that wasn't there.</p>
+
+      <h3>You Can Back Up the File, But Can You Restore the System?</h3>
+      <p>There's a big difference between having a copy of a file and being able to restore a working server from scratch. Full system restores are complicated. They require the right media, the right tools, and someone who knows how to do it. If you've never done a test restore, you don't actually know if you can.</p>
+    </div>
+  </section>
+
+  <!-- Real Stories -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>Stories From the Field (The Kind Nobody Tells You About)</h2>
+
+      <p>I don't share these to scare you. I share them because real examples make the risk concrete in a way that abstract warnings don't.</p>
+
+      <p><strong>The accounting firm that lost 14 months of data.</strong> A small accounting practice got hit with ransomware in January. Their backup software had been failing silently since November of the prior year &mdash; error emails were going to the owner's spam folder. Their most recent usable backup was from the previous October. They spent six weeks manually reconstructing records from client-submitted documents, paper files, and partial data. Some records were gone for good.</p>
+
+      <p><strong>The restaurant that couldn't open.</strong> A restaurant group's point-of-sale server died on a Saturday morning. They had backups. But the backup was a full-system image, and the only person who knew how to do a bare-metal restore had left the company eight months earlier. They were offline for a full day &mdash; a Saturday in prime season &mdash; while a technician figured out the restore process from scratch.</p>
+
+      <p><strong>The construction company with the wrong files.</strong> A general contractor had been backing up their server for three years. When a ransomware attack encrypted their data, we went to restore &mdash; and found that the backup job had been excluding the project folder by accident since the initial setup. Everything else was there. Three years of project files were gone.</p>
+
+      <p>In every one of these situations, a regular backup test would have caught the problem before it became a disaster. Not a complicated test. Just someone sitting down once a month, picking a file at random, and actually restoring it.</p>
+    </div>
+  </section>
+
+  <!-- What to Test -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>What You Actually Need to Test &mdash; and How Often</h2>
+
+      <p>Let's make this practical. You don't need to simulate a full disaster recovery every month. But you do need to verify, on a regular schedule, that your backups are working and restorable. Here's a tiered approach that most small businesses can manage without a lot of overhead.</p>
+
+      <h3>Weekly: Verify That Backups Are Completing</h3>
+      <p>Once a week, someone on your team (or your IT provider) should log in to your backup software and confirm that recent backup jobs completed successfully. Not just "did it run" &mdash; but "did it complete without errors?" This takes about two minutes and catches most silent failures before they become month-long gaps.</p>
+
+      <p>If you have a managed IT provider, this should be in their scope. Ask them for a backup status report. If they can't produce one, that's a conversation worth having.</p>
+
+      <h3>Monthly: Restore a File or Folder</h3>
+      <p>Once a month, pick something specific &mdash; a document, a spreadsheet, a folder from your accounting software &mdash; and actually restore it. Not to the original location (that would overwrite the real file). Restore it to a test folder and verify that you can open it and the contents look right.</p>
+
+      <p>This takes maybe 20 minutes. It confirms that your backup software can actually retrieve files, that the files aren't corrupted, and that the person doing the restore knows how the process works. That last point matters more than most people realize.</p>
+
+      <h3>Quarterly: Test a Larger Restore</h3>
+      <p>Four times a year, go bigger. Restore an entire directory. Restore your most critical database to a test environment and verify that it opens and runs correctly. If you have a virtual server, try spinning up a snapshot in an isolated environment to confirm the system actually boots.</p>
+
+      <p>This is where you'll catch the bigger problems: the database that's corrupted, the system image that won't boot, the restore process that's more complicated than expected.</p>
+
+      <h3>Annually: Full DR Exercise</h3>
+      <p>Once a year, run through your full disaster recovery plan. Simulate a major failure and go through the actual steps: who calls whom, what gets restored in what order, how long it takes, what's missing. We have a full guide on this in our <a href="/blog-disaster-recovery-plan.html">disaster recovery planning post</a>, but the short version is: if you've never done it, you don't know if you can.</p>
+    </div>
+  </section>
+
+  <!-- What to Check -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>The Quick-Start Backup Health Check</h2>
+
+      <p>If you're not sure where to start, here are the questions to answer right now. Grab your IT person or your backup software dashboard and work through these:</p>
+
+      <p><strong>What exactly is being backed up?</strong> Get a list of every machine, server, and application that's included in your backup job. Then think about whether anything is missing &mdash; workstations, cloud apps, external drives, email.</p>
+
+      <p><strong>How often are backups running?</strong> For most businesses, daily at minimum. If your backup runs weekly and you get hit on a Friday, you're potentially losing a week of work. Critical systems should back up multiple times per day.</p>
+
+      <p><strong>Where are the backups stored?</strong> On-site only is not enough. If there's a fire, flood, theft, or ransomware attack that encrypts your network, on-site backups go with everything else. You need an off-site copy &mdash; either a cloud backup or a drive that physically leaves the building.</p>
+
+      <p><strong>How long are backups retained?</strong> Ransomware often sits dormant for 30-90 days before activating. If your retention is only 7 days, your backup might already be infected. You want at least 30 days of history, and 90 is better for critical systems.</p>
+
+      <p><strong>Who gets alerted when a backup fails?</strong> If the answer is "nobody" or "the alerts go to an email I never check," fix that today. Backup failure notifications should go to someone who will actually see them and act on them.</p>
+
+      <p><strong>When was the last restore test?</strong> If the answer is "never" or "I can't remember," schedule one for this week. Not next month. This week.</p>
+
+      <p>You can also work through a broader IT health assessment using our <a href="/cybersecurity-guide.html">cybersecurity guide</a> &mdash; backups are one piece of a larger picture, and it's worth looking at everything together.</p>
+    </div>
+  </section>
+
+  <!-- Making It a Routine -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>How to Make This a Habit (Without It Taking Over Your Life)</h2>
+
+      <p>The reason backup testing doesn't happen in most small businesses isn't laziness. It's that nobody owns it. It's not on anyone's calendar. It's one of those things that everyone assumes someone else is handling.</p>
+
+      <p>Here's how to make it stick:</p>
+
+      <h3>Assign It to a Specific Person</h3>
+      <p>The monthly restore test needs an owner &mdash; a specific name attached to a specific recurring calendar item. If it's "the IT team," it won't happen. If it's "Sarah does a restore test the first Tuesday of every month," it will.</p>
+
+      <h3>Write Down What You Find</h3>
+      <p>Keep a simple log: date, what was tested, result, any issues. Two sentences is fine. This does two things: it creates a record you can show an auditor or a cyber insurance underwriter, and it makes the pattern visible if something starts failing. If you're building toward cyber insurance, having documented backup tests significantly helps your position. We cover this more in our post on <a href="/blog-cyber-insurance.html">what cyber insurance actually covers</a>.</p>
+
+      <h3>Automate the Verification Where You Can</h3>
+      <p>Some backup tools have automated verification built in &mdash; they'll actually restore files to a test location and verify they're readable, then send you a report. This isn't a substitute for human judgment, but it's a useful safety net between manual tests. Ask your backup software vendor if this is available.</p>
+
+      <h3>Make Your IT Provider Accountable</h3>
+      <p>If you have a managed IT provider, backup monitoring and testing should be part of what they deliver. Ask for a monthly backup report. Ask for documentation of restore tests. If they can't or won't provide it, that's worth understanding. We go deeper on what to expect from an IT provider in our <a href="/it-buyers-guide.html">IT Buyer's Guide</a>.</p>
+    </div>
+  </section>
+
+  <!-- The Real Stakes -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <h2>The Stakes Are Higher Than You Think</h2>
+
+      <p>Here's a number that tends to focus the mind: <strong>60% of small businesses that suffer significant data loss close within six months.</strong> That's not a scare tactic &mdash; it's the reality of what happens when years of customer records, financial history, and operational data disappear and can't be recovered.</p>
+
+      <p>And here's the thing about that number: it's not because those businesses didn't have backups. Most of them thought they had backups. They just didn't know whether those backups actually worked.</p>
+
+      <p>Ransomware is the most obvious threat right now, but it's not the only one. Hardware fails. Files get accidentally deleted. Software corrupts data. Employees make mistakes. Power surges happen. These are normal, everyday business events &mdash; and a tested backup strategy handles all of them.</p>
+
+      <p>The cost of a restore test is an hour of someone's time per month. The cost of finding out your backups don't work at the worst possible moment is something else entirely.</p>
+
+      <p>If you're not sure where your backups stand, the best thing you can do is find out now &mdash; not after something goes wrong. That might mean sitting down with your IT person this week and working through the health check questions above. It might mean asking us to take a look. Either way, knowing is always better than hoping.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Not Sure If Your Backups Will Actually Work?</h2>
+      <p>We can run a backup health check for you &mdash; look at what's being backed up, verify your restore process, and give you an honest assessment of where you stand. No obligation, no pressure.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Backup Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>

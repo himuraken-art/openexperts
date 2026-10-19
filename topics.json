@@ -216,7 +216,7 @@
       "title": "When Was the Last Time You Tested Your Backups? (If You Can't Remember, Read This)",
       "keywords": "backup testing, backup restore test, backup verification, are my backups working",
       "angle": "Backups that have never been tested are Schrodinger's backups — they might work, they might not. Real horror stories of untested backups failing. How to build a testing routine.",
-      "used": false
+      "used": true
     },
     {
       "slug": "hardware-lifecycle",
