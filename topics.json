@@ -223,7 +223,7 @@
       "title": "Your 7-Year-Old Server Is a Ticking Time Bomb. Here's the Math.",
       "keywords": "server replacement cycle, hardware lifecycle, when to replace server, old server risk",
       "angle": "The cost of running old hardware vs replacing it. Failure rates by age, energy costs, performance impact, warranty gaps. A simple framework for budgeting hardware replacement.",
-      "used": false
+      "used": true
     },
     {
       "slug": "microsoft-licensing-maze",
