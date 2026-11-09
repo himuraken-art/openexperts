@@ -237,7 +237,7 @@
       "title": "Your Employees Will Give Away the Keys to the Kingdom If You Ask Nicely Enough",
       "keywords": "social engineering attacks, social engineering prevention, employee security awareness",
       "angle": "How social engineering works — phone pretexting, tailgating, impersonation. Real scenarios. Why even smart people fall for it. How training and process changes make it much harder.",
-      "used": false
+      "used": true
     },
     {
       "slug": "dns-filtering",
