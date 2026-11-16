@@ -244,7 +244,7 @@
       "title": "The Cheapest Security Upgrade You're Not Using: DNS Filtering",
       "keywords": "DNS filtering business, DNS security, web filtering small business, block malicious websites",
       "angle": "DNS filtering blocks malicious sites before they load. Takes 15 minutes to set up, costs almost nothing, stops a huge percentage of threats. One of the best bang-for-buck security measures.",
-      "used": false
+      "used": true
     },
     {
       "slug": "it-audit-checklist",

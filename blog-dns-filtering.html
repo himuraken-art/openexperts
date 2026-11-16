@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cheapest Security Upgrade You're Not Using: DNS Filtering | Open Experts</title>
+  <meta name="description" content="DNS filtering blocks malicious websites before they load — and takes about 15 minutes to set up. Here's what it is, why it works, and how to get it for your business today.">
+  <meta name="keywords" content="DNS filtering business, DNS security, web filtering small business, block malicious websites, Cloudflare Gateway, OpenDNS, DNS protection">
+  <link rel="canonical" href="https://openexperts.tech/blog-dns-filtering.html">
+  <link rel="stylesheet" href="style.css">
+
+  <meta property="og:title" content="The Cheapest Security Upgrade You're Not Using: DNS Filtering">
+  <meta property="og:description" content="DNS filtering blocks malicious websites before they load — takes 15 minutes to set up, costs almost nothing, and stops a surprising percentage of threats.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://openexperts.tech/blog-dns-filtering.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Cheapest Security Upgrade You're Not Using: DNS Filtering",
+    "description": "DNS filtering blocks malicious websites before they load — and takes about 15 minutes to set up. Here's what it is, why it works, and how to get it for your business today.",
+    "author": {
+      "@type": "Organization",
+      "name": "Open Experts",
+      "url": "https://openexperts.tech"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Open Experts"
+    },
+    "datePublished": "2026-11-16",
+    "mainEntityOfPage": "https://openexperts.tech/blog-dns-filtering.html"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="logo">open<span>experts</span>.tech</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+      <div class="nav-links">
+        <a href="/blog.html">Blog</a>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/#contact" class="cta-nav">Free Consultation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:3rem;">
+    <h1>The Cheapest Security Upgrade<br>You&rsquo;re Not Using:<br><em>DNS Filtering</em></h1>
+    <p>It takes 15 minutes to set up. It costs almost nothing. And it quietly blocks a huge chunk of malicious traffic before it ever reaches your network. So why aren&rsquo;t more businesses using it?</p>
+  </section>
+
+  <!-- Intro -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <p>When we sit down with a new client and audit their security setup, we almost always find the same gaps: no multi-factor authentication, weak firewall, aging hardware. But there&rsquo;s one fix that almost nobody has in place &mdash; and it&rsquo;s one of the easiest and cheapest things you can do.</p>
+
+      <p>It&rsquo;s called DNS filtering. And if you&rsquo;re not using it, you&rsquo;re missing out on one of the best security measures per dollar we know of.</p>
+
+      <p>I know &ldquo;DNS filtering&rdquo; sounds like something that requires a networking degree to understand. It doesn&rsquo;t. By the end of this post, you&rsquo;ll know exactly what it is, why it matters, and how to get it working on your network today.</p>
+    </div>
+  </section>
+
+  <!-- What is DNS -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Basics</div>
+      <h2>First, What Is DNS? (The 60-Second Version)</h2>
+
+      <p>Every time someone on your network types a website address into a browser &mdash; or when your computer connects to a server automatically in the background &mdash; it has to look up the numeric address (IP address) for that domain name. That lookup is called a DNS query.</p>
+
+      <p>Think of DNS like a phone book. You type &ldquo;google.com&rdquo; and your computer says, &ldquo;What&rsquo;s the number for google.com?&rdquo; A DNS server answers: &ldquo;It&rsquo;s 142.250.80.46.&rdquo; Your browser connects. This happens thousands of times a day, completely invisibly.</p>
+
+      <p>Your network is almost certainly using a DNS server right now. The question is <em>which one</em> &mdash; and whether it&rsquo;s doing anything useful with all those lookups.</p>
+
+      <p>By default, most small businesses use whatever DNS server their ISP provides. It answers queries accurately, but it doesn&rsquo;t do anything to protect you. It&rsquo;ll happily give your browser the address for a known malware distribution site, a phishing page, or a botnet command server.</p>
+
+      <p>DNS filtering changes that.</p>
+    </div>
+  </section>
+
+  <!-- How DNS filtering works -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">How It Works</div>
+      <h2>How DNS Filtering Blocks Threats Before They Load</h2>
+
+      <p>A DNS filtering service maintains a constantly updated list of known malicious domains: phishing sites, malware distributors, ransomware command-and-control servers, scam sites, and more. When a device on your network tries to look up one of those domains, the filtering service simply doesn&rsquo;t give it an answer &mdash; or redirects it to a block page. The connection never happens.</p>
+
+      <p>This is powerful for a few reasons:</p>
+
+      <p><strong>It stops threats before they load.</strong> Your browser never connects to the malicious site. No malware is downloaded. No phishing form is displayed. The threat is killed at the front door, not after it&rsquo;s already inside.</p>
+
+      <p><strong>It works for every device on your network.</strong> Change the DNS settings on your router, and every device that connects &mdash; laptops, phones, tablets, even that printer &mdash; gets protection automatically. No software to install on each machine.</p>
+
+      <p><strong>It catches things that antivirus misses.</strong> Antivirus software scans files. DNS filtering blocks connections. These are two different layers of defense, and they catch two different categories of threats. If someone clicks a link in a phishing email, your antivirus might not flag it &mdash; but DNS filtering would block the connection to the phishing domain before the page even loads.</p>
+
+      <p><strong>It stops malware from phoning home.</strong> Even if malware somehow gets onto a machine, most malware needs to connect back to a command server to do anything useful. DNS filtering blocks those connections, effectively neutering the malware even after infection.</p>
+    </div>
+  </section>
+
+  <!-- Real numbers -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Impact</div>
+      <h2>How Much Does It Actually Stop?</h2>
+
+      <p>Cloudflare &mdash; one of the companies that offers DNS filtering &mdash; reports that their DNS resolver blocks tens of billions of malicious DNS requests every day. That&rsquo;s not marketing fluff; it&rsquo;s a reflection of how much malicious activity actually travels through DNS.</p>
+
+      <p>When we set up DNS filtering for clients, the logs are always eye-opening. Within the first few days, we typically see dozens to hundreds of blocked requests that the client never knew were happening. Some of it is adware on old machines. Some of it is malware that&rsquo;s been silently trying to phone home for months. Occasionally it&rsquo;s something more serious.</p>
+
+      <p>None of it was visible before &mdash; because no one was watching.</p>
+
+      <p>DNS filtering doesn&rsquo;t replace your other security measures. You still want <a href="/blog-more-than-antivirus.html">real endpoint protection</a>, <a href="/blog-mfa-explained.html">multi-factor authentication</a>, and a <a href="/blog-consumer-router-firewall.html">proper business firewall</a>. But DNS filtering is the rare security measure that&rsquo;s cheap, fast to deploy, and genuinely effective. It&rsquo;s one of the first things we add when we take over a new account.</p>
+    </div>
+  </section>
+
+  <!-- Options -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Your Options</div>
+      <h2>Which DNS Filtering Service Should You Use?</h2>
+
+      <p>There are several solid options. Here are the ones we actually use and recommend:</p>
+
+      <h3>Cloudflare Gateway (Free tier available)</h3>
+      <p>Cloudflare&rsquo;s Zero Trust platform includes DNS filtering, and the free tier is surprisingly capable for small businesses. You get malware blocking, threat intelligence, and basic filtering. The paid tiers add content categories, detailed logging, and policy controls. For a small business that just wants baseline protection, the free tier is a legitimate starting point.</p>
+
+      <h3>Cisco Umbrella (OpenDNS)</h3>
+      <p>OpenDNS has been around for years and was acquired by Cisco. It&rsquo;s one of the most widely used DNS filtering platforms in business environments. The free version blocks known malicious domains. The paid tiers add granular content filtering, reporting, and roaming protection for laptops that leave the office network. This is what we most often deploy for clients who want something robust and reliable.</p>
+
+      <h3>Quad9</h3>
+      <p>Quad9 is a nonprofit DNS service that blocks malicious domains by default, completely free. It&rsquo;s not as feature-rich as the commercial options &mdash; you can&rsquo;t add custom policies or see detailed logs &mdash; but for the absolute zero-budget option, it&rsquo;s infinitely better than your ISP&rsquo;s default DNS. The address is easy to remember: 9.9.9.9.</p>
+
+      <h3>What about content filtering?</h3>
+      <p>Some DNS filtering services also let you block categories of content &mdash; social media during work hours, gambling sites, adult content. Whether you want that is a business decision. We generally recommend focusing on the security side (malware, phishing, botnets) and not trying to police every website employees visit &mdash; that creates its own management headaches. But the option is there if you need it.</p>
+    </div>
+  </section>
+
+  <!-- How to set it up -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Setup</div>
+      <h2>How to Actually Set It Up (It&rsquo;s Simpler Than You Think)</h2>
+
+      <p>The basic setup takes about 15 minutes and doesn&rsquo;t require any special hardware or software.</p>
+
+      <h3>Option 1: Configure it at the router (recommended)</h3>
+      <p>Log into your router&rsquo;s admin interface. Find the DNS settings &mdash; usually under &ldquo;WAN&rdquo; or &ldquo;Internet&rdquo; settings. Change the DNS server addresses from your ISP&rsquo;s servers to your DNS filtering provider&rsquo;s servers. Save and apply. Every device on your network now uses the filtered DNS service automatically.</p>
+
+      <p>That&rsquo;s it. No software to install. No agents to deploy. The whole network is covered.</p>
+
+      <h3>Option 2: Configure it on individual computers</h3>
+      <p>If you can&rsquo;t access your router, or you want to protect specific machines regardless of what network they&rsquo;re on, you can configure DNS settings on each device individually. This is more work but gives you per-device control.</p>
+
+      <h3>Option 3: Use a filtering client for roaming protection</h3>
+      <p>When employees take laptops home or work from coffee shops, router-level DNS filtering doesn&rsquo;t protect them. The commercial services like Cisco Umbrella and Cloudflare Gateway offer small client software you install on laptops that enforces DNS filtering no matter where the device is. If your team works remotely at all, this is worth considering alongside a <a href="/blog-remote-work-security.html">solid remote work security strategy</a>.</p>
+
+      <h3>What about the technical details?</h3>
+      <p>There are some nuances. If you&rsquo;re using a business-grade firewall like pfSense or OPNsense, you&rsquo;ll configure DNS there. Some more advanced setups use DNS-over-HTTPS to prevent interception. If your IT person is involved, they can handle those details. But for most small businesses with a standard router, the basic configuration above is sufficient to get real protection quickly.</p>
+    </div>
+  </section>
+
+  <!-- What it won't do -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Honest Limitations</div>
+      <h2>What DNS Filtering Won&rsquo;t Do</h2>
+
+      <p>DNS filtering is genuinely useful, but let&rsquo;s be honest about what it isn&rsquo;t.</p>
+
+      <p><strong>It won&rsquo;t stop every threat.</strong> Attackers know DNS filtering exists. Some malware communicates over IP addresses directly, bypassing DNS lookups entirely. New malicious domains are constantly being registered faster than blocklists can be updated. DNS filtering catches a lot, but it&rsquo;s not a complete solution on its own.</p>
+
+      <p><strong>It won&rsquo;t replace a firewall.</strong> DNS filtering and a firewall are both important, and they do different things. Your <a href="/blog-consumer-router-firewall.html">firewall controls what traffic can enter and leave your network</a>. DNS filtering affects which domains devices on your network can resolve. You need both.</p>
+
+      <p><strong>It won&rsquo;t stop encrypted threats that are already inside the network.</strong> Once malware is on a machine and communicating over an encrypted channel, DNS filtering can&rsquo;t see it. That&rsquo;s where your endpoint protection comes in.</p>
+
+      <p><strong>It won&rsquo;t help if employees use their phone&rsquo;s data instead of Wi-Fi.</strong> If someone connects to a phishing site over cellular data, your network-level DNS filter has no visibility. This is another reason why user training matters alongside technical controls.</p>
+
+      <p>None of these limitations mean DNS filtering isn&rsquo;t worth doing. They mean it&rsquo;s one part of a layered security approach &mdash; which is exactly the right way to think about small business cybersecurity. No single tool stops everything. The goal is to have enough layers that attackers give up and move to an easier target.</p>
+    </div>
+  </section>
+
+  <!-- Layered security context -->
+  <section class="content-section alt">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">The Bigger Picture</div>
+      <h2>Where DNS Filtering Fits in Your Security Stack</h2>
+
+      <p>We talk to business owners all the time who think they&rsquo;re either fully protected or completely exposed. The reality is almost always somewhere in the middle &mdash; and the goal is to keep moving toward better.</p>
+
+      <p>If you had to build a security foundation from scratch, here&rsquo;s a rough priority order for a small business:</p>
+
+      <p><strong>First:</strong> <a href="/blog-mfa-explained.html">Multi-factor authentication</a> on everything that supports it &mdash; email especially. This single change stops the majority of account takeover attacks.</p>
+
+      <p><strong>Second:</strong> Good backups that are tested. If everything else fails, you can recover from a good backup. If you don&rsquo;t have tested backups, you&rsquo;re gambling with your business data.</p>
+
+      <p><strong>Third:</strong> DNS filtering. Fast, cheap, effective, and once it&rsquo;s set up you barely have to think about it again.</p>
+
+      <p><strong>Fourth:</strong> A <a href="/blog-consumer-router-firewall.html">real business firewall</a>, not a consumer router. This is where the investment goes up a bit, but the security improvement is significant.</p>
+
+      <p><strong>Fifth and beyond:</strong> Endpoint protection, email filtering, security awareness training, and the rest of what we cover in our <a href="/cybersecurity-guide.html">small business cybersecurity guide</a>.</p>
+
+      <p>DNS filtering earns its place at #3 on that list because of the ratio of effort to protection. You&rsquo;re not making a major investment. You&rsquo;re not disrupting your team&rsquo;s workflow. You&rsquo;re making a 15-minute change that quietly blocks threats around the clock.</p>
+
+      <p>That&rsquo;s a good trade.</p>
+    </div>
+  </section>
+
+  <!-- Action steps -->
+  <section class="content-section">
+    <div class="section-inner" style="max-width:800px;">
+      <div class="section-label">Action Steps</div>
+      <h2>What to Do This Week</h2>
+
+      <p>Here&rsquo;s the short version of what to do:</p>
+
+      <p><strong>If you want to start free and simple:</strong> Log into your router today and change your DNS servers to Quad9 (9.9.9.9 / 149.112.112.112). You&rsquo;ll have baseline malware blocking on every device in your office within minutes.</p>
+
+      <p><strong>If you want something more robust:</strong> Sign up for Cloudflare Gateway or OpenDNS and follow their setup guides. The free tiers are genuinely good for most small businesses. If you want managed setup, logging, and roaming client protection, the paid tiers of these services are inexpensive &mdash; often just a few dollars per user per month.</p>
+
+      <p><strong>If you have an IT provider:</strong> Ask them whether you have DNS filtering in place. If the answer is no or &ldquo;I&rsquo;m not sure,&rdquo; that&rsquo;s worth following up on. It should take them less than an hour to implement.</p>
+
+      <p>If you want someone to look at your whole security posture &mdash; not just DNS filtering &mdash; that&rsquo;s exactly what we do. Take a look at our <a href="/cybersecurity-guide.html">cybersecurity guide</a> for a broader overview, or just reach out and we&rsquo;ll give you an honest picture of where you stand.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="section-inner">
+      <h2>Want to Know Where Your Security Actually Stands?</h2>
+      <p>We&rsquo;ll walk through your current setup, tell you what&rsquo;s missing, and give you a prioritized list of what to fix first &mdash; starting with the quick wins like DNS filtering. No obligation, no sales pitch.</p>
+      <a href="/#contact" class="cta-btn">Get a Free Security Assessment</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">open<span>experts</span>.tech</a>
+        <p>Small business IT that actually works. 30+ years of experience helping businesses like yours get technology right &mdash; reliably, affordably, and without the runaround.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="/resources.html">Free Resources</a>
+        <a href="/services.html">What We Do</a>
+        <a href="/proxmox-migration.html">Cut Your IT Costs</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/#contact">Free Consultation</a>
+      </div>
+      <div class="footer-col">
+        <h4>Free Resources</h4>
+        <a href="/cybersecurity-guide.html">Cybersecurity Guide</a>
+        <a href="/it-buyers-guide.html">IT Buyer's Guide</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 openexperts.tech &mdash; Small Business IT Experts</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('active');});
+  </script>
+</body>
+</html>
