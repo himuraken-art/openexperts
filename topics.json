@@ -251,7 +251,7 @@
       "title": "A 20-Point IT Audit You Can Do Yourself (Before Calling Anyone)",
       "keywords": "IT audit checklist, small business IT assessment, IT health check DIY",
       "angle": "Empowering, not sales-y. Give them 20 yes/no questions to assess their own IT health. Covers backups, security, documentation, hardware age, licensing, disaster recovery. Score yourself and know where you stand.",
-      "used": false
+      "used": true
     },
     {
       "slug": "year-end-it-planning",
